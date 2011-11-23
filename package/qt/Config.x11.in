@@ -1,0 +1,79 @@
+menuconfig BR2_PACKAGE_QT_X11
+	bool "QT/X11"
+	help
+	  Qt for Embedded Linux X11.
+
+	  http://developer.qt.nokia.com/wiki/Support_for_Linux_X11
+	  http://doc.qt.nokia.com/stable/requirements-x11.html
+
+if BR2_PACKAGE_QT_X11
+
+config BR2_PACKAGE_QT_X11_GTKSTYLE
+	bool "GTK theme"
+
+config BR2_PACKAGE_QT_X11_SYSTEM_NAS_SOUND
+	bool "System NAS sound"
+
+config BR2_PACKAGE_QT_X11_EGL
+	bool "Use EGL instead of GLX"
+
+config BR2_PACKAGE_QT_X11_OPENGL
+	bool "OpenGL"
+
+config BR2_PACKAGE_QT_X11_OPENVG
+	bool "OpenVG"
+
+config BR2_PACKAGE_QT_X11_SM
+	bool "X Session Management"
+	depends on (BR2_PACKAGE_XLIB_LIBICE && BR2_PACKAGE_XLIB_LIBSM)
+	default y
+
+config BR2_PACKAGE_QT_X11_XSHAPE
+	bool "XShape"
+
+config BR2_PACKAGE_QT_X11_XVIDEO
+	bool "XVideo"
+
+config BR2_PACKAGE_QT_X11_XSYNC
+	bool "XSync"
+
+config BR2_PACKAGE_QT_X11_XINERAMA
+	bool "Xinerama"
+	depends on BR2_PACKAGE_XLIB_LIBXINERAMA
+
+config BR2_PACKAGE_QT_X11_XCURSOR
+	bool "Xcursor"
+	depends on BR2_PACKAGE_XLIB_LIBXCURSOR
+
+comment "need xlib_xcursor"
+	depends on !BR2_PACKAGE_XLIB_LIBXCURSOR
+
+config BR2_PACKAGE_QT_X11_XFIXES
+	bool "Xfixes"
+	depends on BR2_PACKAGE_XLIB_LIBXFIXES
+
+config BR2_PACKAGE_QT_X11_XRANDR
+	bool "Xrandr"
+	depends on BR2_PACKAGE_XLIB_LIBXRANDR
+
+config BR2_PACKAGE_QT_X11_XRENDER
+	bool "Xrender"
+	depends on BR2_PACKAGE_XLIB_LIBXRENDER
+
+config BR2_PACKAGE_QT_X11_MITSHM
+	bool "MIT-SHM"
+
+config BR2_PACKAGE_QT_X11_FONTCONFIG
+	bool "Fontconfig"
+
+config BR2_PACKAGE_QT_X11_XINPUT
+	bool "Xinput"
+	depends on BR2_PACKAGE_XLIB_LIBXI
+
+config BR2_PACKAGE_QT_X11_XKB
+	bool "X KeyBoard extension"
+
+config BR2_PACKAGE_QT_X11_GLIB
+	bool "Glib"
+
+endif # BR2_PACKAGE_QT_X11

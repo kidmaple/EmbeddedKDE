@@ -18,6 +18,12 @@ QT_SITE    = http://get.qt.nokia.com/qt/source
 
 QT_INSTALL_STAGING = YES
 
+QT_PREFIX_DIR = usr/qt
+QT_PLUGINS_DIR = $(QT_PREFIX_DIR)/lib/plugins
+QT_FONTS_DIR = $(QT_PREFIX_DIR)/lib/fonts
+QT_EXAMPLES_DIR = $(QT_PREFIX_DIR)/share/qt/examples
+QT_DEMOS_DIR = $(QT_PREFIX_DIR)/share/qt/demos
+
 ifeq ($(BR2_PACKAGE_QT_LICENSE_APPROVED),y)
 QT_CONFIGURE_OPTS += -opensource -confirm-license
 endif
@@ -52,7 +58,8 @@ QT_CONFIGURE_OPTS += -no-qt3support
 endif
 
 ifeq ($(BR2_PACKAGE_QT_DEMOS),y)
-QT_CONFIGURE_OPTS += -examplesdir $(TARGET_DIR)/usr/share/qt/examples -demosdir $(TARGET_DIR)/usr/share/qt/demos
+QT_CONFIGURE_OPTS += -make examples -examplesdir $(TARGET_DIR)/$(QT_EXAMPLES_DIR) \
+		     -make demos -demosdir $(TARGET_DIR)/$(QT_DEMOS_DIR)
 else
 QT_CONFIGURE_OPTS += -nomake examples -nomake demos
 endif
@@ -216,7 +223,8 @@ else
 QT_EMB_PLATFORM = generic
 endif
 
-QT_CONFIGURE_OPTS += -embedded $(QT_EMB_PLATFORM)
+#QT_CONFIGURE_OPTS += -embedded $(QT_EMB_PLATFORM)
+QT_CONFIGURE_OPTS += -xplatform qws/linux-$(QT_EMB_PLATFORM)-g++ -platform qws/linux-x86-g++ -arch $(QT_EMB_PLATFORM) -host-arch i386
 
 ifneq ($(BR2_PACKAGE_QT_GUI_MODULE),y)
 QT_CONFIGURE_OPTS += -no-gui
@@ -276,7 +284,7 @@ QT_CONFIGURE_OPTS += -no-libtiff
 endif
 endif
 
-QT_FONTS = $(addprefix $(STAGING_DIR)/usr/lib/fonts/, $(addsuffix *.qpf, \
+QT_FONTS = $(addprefix $(STAGING_DIR)/$(QT_FONTS_DIR)/, $(addsuffix *.qpf, \
 	   $(if $(BR2_PACKAGE_QT_FONT_MICRO),micro) \
 	   $(if $(BR2_PACKAGE_QT_FONT_FIXED),fixed) \
 	   $(if $(BR2_PACKAGE_QT_FONT_HELVETICA),helvetica) \
@@ -410,10 +418,99 @@ QT_CONFIGURE_OPTS += -no-stl
 endif
 
 ifeq ($(BR2_PACKAGE_QT_DECLARATIVE),y)
-QT_CONFIGURE_OPTS += -declarative
+QT_CONFIGURE_OPTS += -declarative -no-declarative-debug
 else
-QT_CONFIGURE_OPTS += -no-declarative
+QT_CONFIGURE_OPTS += -no-declarative -no-declarative-debug
 endif
+
+# Qt X11
+ifeq ($(BR2_PACKAGE_QT_X11),y)
+
+QT_DEPENDENCIES   += libxcb xlib_libICE xlib_libSM xlib_libX11 xlib_libXcursor \
+		xlib_libXext xlib_libXfixes xlib_libXfont xlib_libXft xlib_libXi \
+		xlib_libXinerama xlib_libXrandr xlib_libXrender xlib_libXt xlib_libXv 
+
+ifeq ($(BR2_PACKAGE_QT_X11_GTKSTYLE),y)
+QT_CONFIGURE_OPTS += -gtkstyle
+endif
+
+ifeq ($(BR2_PACKAGE_QT_X11_SYSTEM_NAS_SOUND),y)
+QT_CONFIGURE_OPTS += -system-nas-sound
+endif
+
+ifeq ($(BR2_PACKAGE_QT_X11_EGL),y)
+QT_CONFIGURE_OPTS += -egl
+endif
+
+ifeq ($(BR2_PACKAGE_QT_X11_OPENGL),y)
+QT_CONFIGURE_OPTS += -opengl
+endif
+
+ifeq ($(BR2_PACKAGE_QT_X11_OPENVG),y)
+QT_CONFIGURE_OPTS += -openvg
+endif
+
+ifeq ($(BR2_PACKAGE_QT_X11_SM),y)
+QT_CONFIGURE_OPTS += -sm
+endif
+
+ifeq ($(BR2_PACKAGE_QT_X11_XSHAPE),y)
+QT_CONFIGURE_OPTS += -xshape
+endif
+
+ifeq ($(BR2_PACKAGE_QT_X11_XVIDEO),y)
+QT_CONFIGURE_OPTS += -xvideo
+endif
+
+ifeq ($(BR2_PACKAGE_QT_X11_XSYNC),y)
+QT_CONFIGURE_OPTS += -xsync
+endif
+
+ifeq ($(BR2_PACKAGE_QT_X11_XINERAMA),y)
+QT_CONFIGURE_OPTS += -xinerama
+endif
+
+ifeq ($(BR2_PACKAGE_QT_X11_XCURSOR),y)
+QT_CONFIGURE_OPTS += -xcursor
+endif
+
+ifeq ($(BR2_PACKAGE_QT_X11_XFIXES),y)
+QT_CONFIGURE_OPTS += -xfixes
+endif
+
+ifeq ($(BR2_PACKAGE_QT_X11_XRANDR),y)
+QT_CONFIGURE_OPTS += -xrandr
+endif
+
+ifeq ($(BR2_PACKAGE_QT_X11_XRENDER),y)
+QT_CONFIGURE_OPTS += -xrender
+endif
+
+ifeq ($(BR2_PACKAGE_QT_X11_MITSHM),y)
+QT_CONFIGURE_OPTS += -mitshm
+endif
+
+ifeq ($(BR2_PACKAGE_QT_X11_FONTCONFIG),y)
+QT_CONFIGURE_OPTS += -fontconfig
+endif
+
+ifeq ($(BR2_PACKAGE_QT_X11_XINPUT),y)
+QT_CONFIGURE_OPTS += -xinput
+endif
+
+ifeq ($(BR2_PACKAGE_QT_X11_XKB),y)
+QT_CONFIGURE_OPTS += -xkb
+endif
+
+ifeq ($(BR2_PACKAGE_QT_X11_GLIB),y)
+QT_CONFIGURE_OPTS += -glib
+endif
+
+else #BR2_PACKAGE_QT_X11
+
+QT_CONFIGURE_OPTS += -no-xinerama
+
+endif #BR2_PACKAGE_QT_X11
 
 # ccache and precompiled headers don't play well together
 ifeq ($(BR2_CCACHE),y)
@@ -431,7 +528,7 @@ endif
 # End of workaround.
 
 # Variable for other Qt applications to use
-QT_QMAKE:=$(HOST_DIR)/usr/bin/qmake -spec qws/linux-$(QT_EMB_PLATFORM)-g++
+QT_QMAKE:=$(HOST_DIR)/$(QT_PREFIX_DIR)/bin/qmake -spec qws/linux-$(QT_EMB_PLATFORM)-g++
 
 ################################################################################
 # QT_QMAKE_SET -- helper macro to set <variable> = <value> in
@@ -468,6 +565,10 @@ define QT_CONFIGURE_CMDS
 	$(QT_CONFIGURE_IPV6)
 	$(QT_CONFIGURE_CONFIG_FILE)
 	# Fix compiler path
+	$(call QT_QMAKE_SET,QMAKE_LIBS_X11,-lXext -lX11 -lm,$(@D))
+	$(call QT_QMAKE_SET,QMAKE_LIBS_X11SM,-lSM -lICE,$(@D))
+	$(call QT_QMAKE_SET,QMAKE_LIBDIR_X11,$(STAGING_DIR)/usr/lib,$(@D))
+	$(call QT_QMAKE_SET,QMAKE_INCDIR_X11,$(STAGING_DIR)/usr/include/X11,$(@D))
 	$(call QT_QMAKE_SET,QMAKE_CC,$(TARGET_CC),$(@D))
 	$(call QT_QMAKE_SET,QMAKE_CXX,$(TARGET_CXX),$(@D))
 	$(call QT_QMAKE_SET,QMAKE_LINK,$(TARGET_CXX),$(@D))
@@ -493,14 +594,14 @@ define QT_CONFIGURE_CMDS
 		-no-gfx-qnx \
 		-no-kbd-qnx \
 		-no-mouse-qnx \
-		-no-xinerama \
 		-no-cups \
 		-no-nis \
-		-no-accessibility \
+		-accessibility \
 		-no-separate-debug-info \
-		-prefix /usr \
-		-plugindir /usr/lib/qt/plugins \
+		-prefix /$(QT_PREFIX_DIR) \
+		-plugindir /$(QT_PLUGINS_DIR) \
 		-hostprefix $(STAGING_DIR) \
+		-make tools \
 		-fast \
 		-no-rpath \
 	)
@@ -560,19 +661,19 @@ ifeq ($(BR2_PACKAGE_QT_QT3SUPPORT),y)
 QT_INSTALL_LIBS    += Qt3Support
 endif
 
-QT_CONF_FILE=$(HOST_DIR)/usr/bin/qt.conf
+QT_CONF_FILE=$(HOST_DIR)/$(QT_PREFIX_DIR)/bin/qt.conf
 
 # Since host programs and spec files have been moved to $(HOST_DIR),
 # we need to tell qmake the new location of the various elements,
 # through a qt.conf file.
 define QT_INSTALL_QT_CONF
 	mkdir -p $(dir $(QT_CONF_FILE))
-	echo "[Paths]"                             > $(QT_CONF_FILE)
-	echo "Prefix=$(HOST_DIR)/usr"             >> $(QT_CONF_FILE)
-	echo "Headers=$(STAGING_DIR)/usr/include" >> $(QT_CONF_FILE)
-	echo "Libraries=$(STAGING_DIR)/usr/lib"   >> $(QT_CONF_FILE)
-	echo "Data=$(HOST_DIR)/usr"               >> $(QT_CONF_FILE)
-	echo "Binaries=$(HOST_DIR)/usr/bin"       >> $(QT_CONF_FILE)
+	echo "[Paths]"                             		> $(QT_CONF_FILE)
+	echo "Prefix=$(HOST_DIR)/$(QT_PREFIX_DIR)" 		>> $(QT_CONF_FILE)
+	echo "Headers=$(STAGING_DIR)/$(QT_PREFIX_DIR)/include"	>> $(QT_CONF_FILE)
+	echo "Libraries=$(STAGING_DIR)/$(QT_PREFIX_DIR)/lib"	>> $(QT_CONF_FILE)
+	echo "Data=$(HOST_DIR)/$(QT_PREFIX_DIR)"               	>> $(QT_CONF_FILE)
+	echo "Binaries=$(HOST_DIR)/$(QT_PREFIX_DIR)/bin"       	>> $(QT_CONF_FILE)
 endef
 
 # After running Qt normal installation process (which installs
@@ -582,42 +683,43 @@ endef
 # programs still find all files they need.
 define QT_INSTALL_STAGING_CMDS
 	$(MAKE) -C $(@D) install
-	mkdir -p $(HOST_DIR)/usr/bin
-	mv $(addprefix $(STAGING_DIR)/usr/bin/,$(QT_HOST_PROGRAMS)) $(HOST_DIR)/usr/bin
-	rm -rf $(HOST_DIR)/usr/mkspecs
-	mv $(STAGING_DIR)/usr/mkspecs $(HOST_DIR)/usr
+	mkdir -p $(HOST_DIR)/$(QT_PREFIX_DIR)/bin
+	mv $(addprefix $(STAGING_DIR)/$(QT_PREFIX_DIR)/bin/,$(QT_HOST_PROGRAMS)) $(HOST_DIR)/$(QT_PREFIX_DIR)/bin
+	rm -rf $(HOST_DIR)/$(QT_PREFIX_DIR)/mkspecs
+	cp -r $(STAGING_DIR)/$(QT_PREFIX_DIR)/mkspecs $(HOST_DIR)/$(QT_PREFIX_DIR)
 	$(QT_INSTALL_QT_CONF)
 endef
 
 # Library installation
 ifeq ($(BR2_PACKAGE_QT_SHARED),y)
 define QT_INSTALL_TARGET_LIBS
+	mkdir -p $(TARGET_DIR)/$(QT_PREFIX_DIR)/lib
 	for lib in $(QT_INSTALL_LIBS); do \
-		cp -dpf $(STAGING_DIR)/usr/lib/lib$${lib}.so.* $(TARGET_DIR)/usr/lib ; \
+		cp -dpf $(STAGING_DIR)/$(QT_PREFIX_DIR)/lib/lib$${lib}.so.* $(TARGET_DIR)/$(QT_PREFIX_DIR)/lib ; \
 	done
 endef
 endif
 
 # Plugin installation
 define QT_INSTALL_TARGET_PLUGINS
-	if [ -d $(STAGING_DIR)/usr/lib/qt/plugins/ ] ; then \
-		mkdir -p $(TARGET_DIR)/usr/lib/qt/plugins ; \
-		cp -dpfr $(STAGING_DIR)/usr/lib/qt/plugins/* $(TARGET_DIR)/usr/lib/qt/plugins ; \
+	if [ -d $(STAGING_DIR)/$(QT_PLUGINS_DIR)/ ] ; then \
+		mkdir -p $(TARGET_DIR)/$(QT_PLUGINS_DIR) ; \
+		cp -dpfr $(STAGING_DIR)/$(QT_PLUGINS_DIR)/* $(TARGET_DIR)/$(QT_PLUGINS_DIR) ; \
 	fi
 endef
 
 # Fonts installation
 ifneq ($(QT_FONTS),)
 define QT_INSTALL_TARGET_FONTS
-	mkdir -p $(TARGET_DIR)/usr/lib/fonts
-	cp -dpf $(QT_FONTS) $(TARGET_DIR)/usr/lib/fonts
+	mkdir -p $(TARGET_DIR)/$(QT_FONTS_DIR)
+	cp -dpf $(QT_FONTS) $(TARGET_DIR)/$(QT_FONTS_DIR)
 endef
 endif
 
 ifeq ($(BR2_PACKAGE_QT_QTFREETYPE)$(BR2_PACKAGE_QT_SYSTEMFREETYPE),y)
 define QT_INSTALL_TARGET_FONTS_TTF
-	mkdir -p $(TARGET_DIR)/usr/lib/fonts
-	cp -dpf $(STAGING_DIR)/usr/lib/fonts/*.ttf $(TARGET_DIR)/usr/lib/fonts
+	mkdir -p $(TARGET_DIR)/$(QT_FONTS_DIR)
+	cp -dpf $(STAGING_DIR)/$(QT_FONTS_DIR)/*.ttf $(TARGET_DIR)/$(QT_FONTS_DIR)
 endef
 endif
 
@@ -633,9 +735,10 @@ define QT_CLEAN_CMDS
 endef
 
 define QT_UNINSTALL_TARGET_CMDS
-	-rm -rf $(TARGET_DIR)/usr/lib/fonts
-	-rm $(TARGET_DIR)/usr/lib/libQt*.so.*
-	-rm $(TARGET_DIR)/usr/lib/libphonon.so.*
+	-rm -rf $(TARGET_DIR)/$(QT_PLUGINS_DIR)
+	-rm -rf $(TARGET_DIR)/$(QT_FONTS_DIR)
+	-rm $(TARGET_DIR)/$(QT_PREFIX_DIR)/lib/libQt*.so.*
+	-rm $(TARGET_DIR)/$(QT_PREFIX_DIR)/lib/libphonon.so.*
 endef
 
 $(eval $(call GENTARGETS))

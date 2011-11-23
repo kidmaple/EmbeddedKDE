@@ -386,4 +386,6 @@ config BR2_PACKAGE_QT_DECLARATIVE
 	  Build the Qt Declarative Module for qml support
 	  if unsure, say n.
 
+source "package/qt/Config.x11.in"
+
 endif # BR2_PACKAGE_QT
