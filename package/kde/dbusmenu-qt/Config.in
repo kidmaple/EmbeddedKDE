@@ -1,0 +1,7 @@
+config BR2_PACKAGE_DBUSMENU_QT
+	bool "dbusmenu-qt"
+	help
+	   Support for notification area menus via the DBusMenu protocol
+
+	  git://gitorious.org/dbusmenu/dbusmenu-qt.git
+

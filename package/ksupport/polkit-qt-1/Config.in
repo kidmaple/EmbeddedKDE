@@ -1,0 +1,9 @@
+config BR2_PACKAGE_POLKIT_QT_1
+	bool "polkit-qt-1"
+#	depends on BR2_PACKAGE_QT && BR2_PACKAGE_AUTOMOC4
+	help
+	 Qt wrapper around polkit-1 client libraries, used by kdelibs to provide the polkit-1 kauth backend and by KDE's polkit client.
+
+	  https://projects.kde.org/projects/kdesupport/akonadi
+	  http://pim.kde.org/akonadi/
+

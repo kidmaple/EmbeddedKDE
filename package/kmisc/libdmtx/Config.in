@@ -1,0 +1,8 @@
+config BR2_PACKAGE_LIBDMTX
+	bool "libdmtx"
+#	depends on BR2_PACKAGE_QT && BR2_PACKAGE_AUTOMOC4
+	help
+	  libdmtx is a barcode api currently offering a nice Qt api to produce QRCode barcodes and DataMatrix barcodes, and can easily be made support more.
+
+	  http://kde.mirror.aussiehq.net.au/stable/cagibi/
+

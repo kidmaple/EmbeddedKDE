@@ -1,0 +1,7 @@
+config BR2_PACKAGE_DOCBOOK_XSL
+	bool "DocBook XSL"
+	help
+	  prison is a barcode api currently offering a nice Qt api to produce QRCode barcodes and DataMatrix barcodes, and can easily be made support more.
+
+	  http://www.docbook.org/xml/
+

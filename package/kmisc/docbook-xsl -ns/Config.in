@@ -1,0 +1,7 @@
+config BR2_PACKAGE_DOCBOOK_XSL_NS
+	bool "DocBook-XSL-NS"
+	help
+	  The DocBook XSL-NS stylesheets are released side-by-side with the DocBook XSL stylesheets, as a separate docbook-xsl-ns package.
+
+	  http://www.docbook.org/
+

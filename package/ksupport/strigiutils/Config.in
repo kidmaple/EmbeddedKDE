@@ -1,0 +1,7 @@
+config BR2_PACKAGE_STRIGIUTILS
+	bool "strigiutils"
+	help
+	  Strigi strigiutils.
+
+	  https://projects.kde.org/projects/kdesupport/strigi
+

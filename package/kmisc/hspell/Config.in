@@ -1,0 +1,14 @@
+config BR2_PACKAGE_HSPELL
+	bool "hspell"
+
+	help
+	  The Hspell project is a free Hebrew linguistic project.
+	  Its primary goal is to create a free Hebrew spell-checker.
+
+	  In addition to a spell-checker, the project also produced a Hebrew morphological analyzer, 
+	  which for every valid Hebrew word lists all of its possible readings (valid combinations of prefix and inflected base word), 
+	  and for each reading describe its part-of-speech, gender, tense, and other attributes.
+
+	  The secondary goal of the project is to make the algorithms and dictionaries, created initially for the spell-checker, freely available.
+
+	http://hspell.sourceforge.net/

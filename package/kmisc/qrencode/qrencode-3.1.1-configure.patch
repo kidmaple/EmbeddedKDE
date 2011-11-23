@@ -1,0 +1,87 @@
+*** qrencode-3.1.1.org/configure	2011-10-20 16:51:57.420691404 +0800
+--- qrencode-3.1.1/configure	2011-10-20 16:53:23.869120078 +0800
+***************
+*** 11445,11456 ****
+          pkg_cv_png_CFLAGS="$png_CFLAGS"
+      else
+          if test -n "$PKG_CONFIG" && \
+!     { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"\"libpng12\"\""; } >&5
+!   ($PKG_CONFIG --exists --print-errors ""libpng12"") 2>&5
+    ac_status=$?
+    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+    test $ac_status = 0; }; then
+!   pkg_cv_png_CFLAGS=`$PKG_CONFIG --cflags ""libpng12"" 2>/dev/null`
+  else
+    pkg_failed=yes
+  fi
+--- 11445,11456 ----
+          pkg_cv_png_CFLAGS="$png_CFLAGS"
+      else
+          if test -n "$PKG_CONFIG" && \
+!     { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"\"libpng14\"\""; } >&5
+!   ($PKG_CONFIG --exists --print-errors ""libpng14"") 2>&5
+    ac_status=$?
+    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+    test $ac_status = 0; }; then
+!   pkg_cv_png_CFLAGS=`$PKG_CONFIG --cflags ""libpng14"" 2>/dev/null`
+  else
+    pkg_failed=yes
+  fi
+***************
+*** 11463,11474 ****
+          pkg_cv_png_LIBS="$png_LIBS"
+      else
+          if test -n "$PKG_CONFIG" && \
+!     { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"\"libpng12\"\""; } >&5
+!   ($PKG_CONFIG --exists --print-errors ""libpng12"") 2>&5
+    ac_status=$?
+    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+    test $ac_status = 0; }; then
+!   pkg_cv_png_LIBS=`$PKG_CONFIG --libs ""libpng12"" 2>/dev/null`
+  else
+    pkg_failed=yes
+  fi
+--- 11463,11474 ----
+          pkg_cv_png_LIBS="$png_LIBS"
+      else
+          if test -n "$PKG_CONFIG" && \
+!     { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"\"libpng14\"\""; } >&5
+!   ($PKG_CONFIG --exists --print-errors ""libpng14"") 2>&5
+    ac_status=$?
+    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+    test $ac_status = 0; }; then
+!   pkg_cv_png_LIBS=`$PKG_CONFIG --libs ""libpng14"" 2>/dev/null`
+  else
+    pkg_failed=yes
+  fi
+***************
+*** 11487,11500 ****
+          _pkg_short_errors_supported=no
+  fi
+          if test $_pkg_short_errors_supported = yes; then
+! 	        png_PKG_ERRORS=`$PKG_CONFIG --short-errors --errors-to-stdout --print-errors ""libpng12""`
+          else
+! 	        png_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors ""libpng12""`
+          fi
+  	# Put the nasty error message in config.log where it belongs
+  	echo "$png_PKG_ERRORS" >&5
+  
+! 	as_fn_error "Package requirements (\"libpng12\") were not met:
+  
+  $png_PKG_ERRORS
+  
+--- 11487,11500 ----
+          _pkg_short_errors_supported=no
+  fi
+          if test $_pkg_short_errors_supported = yes; then
+! 	        png_PKG_ERRORS=`$PKG_CONFIG --short-errors --errors-to-stdout --print-errors ""libpng14""`
+          else
+! 	        png_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors ""libpng14""`
+          fi
+  	# Put the nasty error message in config.log where it belongs
+  	echo "$png_PKG_ERRORS" >&5
+  
+! 	as_fn_error "Package requirements (\"libpng14\") were not met:
+  
+  $png_PKG_ERRORS
+  

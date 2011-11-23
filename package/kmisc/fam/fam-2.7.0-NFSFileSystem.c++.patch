@@ -1,0 +1,19 @@
+*** fam-2.7.0/src/NFSFileSystem.c++.org	2011-10-27 10:12:03.476262996 +0800
+--- fam-2.7.0/src/NFSFileSystem.c++	2011-10-27 10:13:18.880254994 +0800
+***************
+*** 97,103 ****
+  
+      attr_cache_timeout = ACREGMAX;
+  
+!     char * p;
+          
+      if (strstr(opt, "noac")) {
+          f_noac = true;
+--- 97,103 ----
+  
+      attr_cache_timeout = ACREGMAX;
+  
+!     const char * p;
+          
+      if (strstr(opt, "noac")) {
+          f_noac = true;

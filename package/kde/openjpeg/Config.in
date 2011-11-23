@@ -1,0 +1,7 @@
+config BR2_PACKAGE_OPENJPEG
+	bool "openjpeg"
+	help
+	  The spacenav project provides a free, compatible alternative to the proprietary 3Dconnexion device driver and SDK, for their 3D input devices (called "space navigator", "space pilot", "space traveller", etc).
+
+	  http://openjpeg.sourceforge.net/
+

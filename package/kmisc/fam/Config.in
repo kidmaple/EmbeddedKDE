@@ -1,0 +1,10 @@
+config BR2_PACKAGE_FAM
+	bool "fam"
+
+	help
+	  GUI tools should not mislead the user; they should display the current state of the system, 
+	  even when changes to the system originate from outside of the tools themselves. 
+	  FAM helps make GUI tools more usable by notifying them when the files they're interested in are created, 
+	  modified, executed, and removed.
+
+	http://oss.sgi.com/projects/fam/index.html

@@ -1,0 +1,40 @@
+cp package/kde/kdelibs/docbookl10nhelper/{build.make,flags.make,link.txt} output/build/kdelibs-v4.7.1/build/kdoctools/CMakeFiles/docbookl10nhelper.dir
+cp package/kde/kdelibs/icemaker/{build.make,flags.make,link.txt} output/build/kdelibs-v4.7.1/build/kjs/CMakeFiles/icemaker.dir
+cp package/kde/kdelibs/kconfig_compiler/{build.make,flags.make,link.txt} output/build/kdelibs-v4.7.1/build/kdecore/kconfig_compiler/CMakeFiles/kconfig_compiler.dir
+cp package/kde/kdelibs/kdewidgets/{build.make,flags.make,link.txt} output/build/kdelibs-v4.7.1/build/kdewidgets/CMakeFiles/makekdewidgets.dir
+cp package/kde/kdelibs/meinproc4/{build.make,flags.make,link.txt} output/build/kdelibs-v4.7.1/build/kdoctools/CMakeFiles/meinproc4.dir
+
+cp package/kde/kdelibs/docbookl10nhelper/{build.make,flags.make,link.txt} output/build/kdelibs-v4.7.1/build/kdoctools/CMakeFiles/docbookl10nhelper.dir
+cp package/kde/kdelibs/icemaker/{build.make,flags.make,link.txt} output/build/kdelibs-v4.7.1/build/kjs/CMakeFiles/icemaker.dir
+cp package/kde/kdelibs/kconfig_compiler/{build.make,flags.make,link.txt} output/build/kdelibs-v4.7.1/build/kdecore/kconfig_compiler/CMakeFiles/kconfig_compiler.dir
+cp package/kde/kdelibs/makekdewidgets/{build.make,flags.make,link.txt} output/build/kdelibs-v4.7.1/build/kdewidgets/CMakeFiles/makekdewidgets.dir
+cp package/kde/kdelibs/meinproc4/{build.make,flags.make,link.txt} output/build/kdelibs-v4.7.1/build/kdoctools/CMakeFiles/meinproc4.dir
+
+sed -i -e 's/\/home\/yeek\/kdedev\/output\/host\/usr\/bin\/arm-none-linux-gnueabi-//' build/kdoctools/CMakeFiles/docbookl10nhelper.dir/build.make
+sed -i -e 's/\/home\/yeek\/kdedev\/output\/host\/usr\/bin\/arm-none-linux-gnueabi-//' build/kdoctools/CMakeFiles/docbookl10nhelper.dir/flags.make
+sed -i -e 's/\/home\/yeek\/kdedev\/output\/host\/usr\/bin\/arm-none-linux-gnueabi-//' build/kdoctools/CMakeFiles/docbookl10nhelper.dir/link.txt
+
+sed -i -e 's/\/home\/yeek\/kdedev\/output\/host\/usr\/bin\/arm-none-linux-gnueabi-//' build/kjs/CMakeFiles/icemaker.dir/build.make
+sed -i -e 's/\/home\/yeek\/kdedev\/output\/host\/usr\/bin\/arm-none-linux-gnueabi-//' build/kjs/CMakeFiles/icemaker.dir/flags.make
+sed -i -e 's/\/home\/yeek\/kdedev\/output\/host\/usr\/bin\/arm-none-linux-gnueabi-//' build/kjs/CMakeFiles/icemaker.dir/link.txt
+
+sed -i -e 's/\/home\/yeek\/kdedev\/output\/host\/usr\/bin\/arm-none-linux-gnueabi-//' build/kdecore/kconfig_compiler/CMakeFiles/kconfig_compiler.dir/build.make
+sed -i -e 's/\/home\/yeek\/kdedev\/output\/host\/usr\/bin\/arm-none-linux-gnueabi-//' build/kdecore/kconfig_compiler/CMakeFiles/kconfig_compiler.dir/flags.make
+sed -i -e 's/\/home\/yeek\/kdedev\/output\/host\/usr\/bin\/arm-none-linux-gnueabi-//' build/kdecore/kconfig_compiler/CMakeFiles/kconfig_compiler.dir/link.txt
+
+sed -i -e 's/\/home\/yeek\/kdedev\/output\/host\/usr\/bin\/arm-none-linux-gnueabi-//' build/kdewidgets/CMakeFiles/makekdewidgets.dir/build.make
+sed -i -e 's/\/home\/yeek\/kdedev\/output\/host\/usr\/bin\/arm-none-linux-gnueabi-//' build/kdewidgets/CMakeFiles/makekdewidgets.dir/flags.make
+sed -i -e 's/\/home\/yeek\/kdedev\/output\/host\/usr\/bin\/arm-none-linux-gnueabi-//' build/kdewidgets/CMakeFiles/makekdewidgets.dir/link.txt
+
+sed -i -e 's/\/home\/yeek\/kdedev\/output\/host\/usr\/bin\/arm-none-linux-gnueabi-//' build/kdoctools/CMakeFiles/meinproc4.dir/build.make
+sed -i -e 's/\/home\/yeek\/kdedev\/output\/host\/usr\/bin\/arm-none-linux-gnueabi-//' build/kdoctools/CMakeFiles/meinproc4.dir/flags.make
+sed -i -e 's/\/home\/yeek\/kdedev\/output\/host\/usr\/bin\/arm-none-linux-gnueabi-//' build/kdoctools/CMakeFiles/meinproc4.dir/link.txt
+
+
+QT_MKSPECS_DIR-NOTFOUND
+
+
+- /home/yeek/kdedev/output/build/kdelibs-v4.7.1/hostlib/libkdecore.so.5.6.0
+- -I/home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/include/polkit-qt-1
+- /home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/lib/libpolkit-qt-core-1.so
+

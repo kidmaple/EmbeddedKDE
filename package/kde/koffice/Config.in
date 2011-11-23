@@ -1,0 +1,7 @@
+config BR2_PACKAGE_KOFFICE
+	bool "koffice"
+	help
+	  koffice, a free software office suite.
+
+	  http://kde.mirror.aussiehq.net.au/stable/4.7.1/src/
+

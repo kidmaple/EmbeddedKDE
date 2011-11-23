@@ -1,0 +1,7 @@
+config BR2_PACKAGE_LIBWPG
+	bool "libwpg"
+	help
+	  Libwpg project is a collection of library and tools to work with graphics in WPG (WordPerfect Graphics) format. WPG is the format used among others in Corel sofware, such as WordPerfect(tm) and Presentations(tm).
+
+	  http://libwpg.sourceforge.net/
+

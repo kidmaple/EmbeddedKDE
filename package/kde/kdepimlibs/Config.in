@@ -1,0 +1,7 @@
+config BR2_PACKAGE_KDEPIMLIBS
+	bool "kdepimlibs"
+	help
+	  KDE's Personal Information Management Libraries
+
+	  http://kde.mirror.aussiehq.net.au/stable/4.7.1/src/
+

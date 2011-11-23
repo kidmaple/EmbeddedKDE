@@ -1,0 +1,7 @@
+config BR2_PACKAGE_LIBICAL
+	bool "libical"
+	help
+	  The Free Association project maintains libical, an open source reference implementation of the icalendar data type and serialization format. libical is used in dozens of calendaring and scheduling products.
+
+	  http://sourceforge.net/projects/freeassociation/
+

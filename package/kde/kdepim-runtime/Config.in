@@ -1,0 +1,8 @@
+config BR2_PACKAGE_KDEPIM_RUNTIME
+	bool "kdepim-runtime"
+#	depends on BR2_PACKAGE_QT && BR2_PACKAGE_AUTOMOC4
+	help
+	  Akonadi Server. A cross-desktop storage service for PIM data and meta data providing concurrent read, write, and query access.
+
+	  http://kde.mirror.aussiehq.net.au/stable/4.7.1/src/
+

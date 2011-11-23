@@ -1,0 +1,96 @@
+*** rasqal-0.9.27.org/configure	2011-08-24 09:23:15.000000000 +0800
+--- rasqal-0.9.27/configure	2011-10-26 17:36:54.268255006 +0800
+***************
+*** 13796,13879 ****
+  
+  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for ceil, floor and round in default libs" >&5
+  $as_echo_n "checking for ceil, floor and round in default libs... " >&6; }
+! ceil_lib=none
+! if test "$cross_compiling" = yes; then :
+!   ceil_lib=none
+! else
+!   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+! /* end confdefs.h.  */
+! 
+! #ifdef HAVE_MATH_H
+! #include <math.h>
+! #endif
+! 
+! int
+! main ()
+! {
+! 
+! double d = ceil(1.0F) + floor(1.0F) + round(1.0F);
+! 
+!   ;
+!   return 0;
+! }
+! _ACEOF
+! if ac_fn_c_try_run "$LINENO"; then :
+!   { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+! $as_echo "yes" >&6; }
+!    ceil_lib=libc
+! else
+!   { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+! $as_echo "no" >&6; }
+! fi
+! rm -f core *.core core.conftest.* gmon.out bb.out conftest$ac_exeext \
+!   conftest.$ac_objext conftest.beam conftest.$ac_ext
+! fi
+! 
+! if test $ceil_lib = none; then
+!   LIBS="$LIBS -lm"
+!   { $as_echo "$as_me:${as_lineno-$LINENO}: checking for ceil, floor and round with -lm" >&5
+! $as_echo_n "checking for ceil, floor and round with -lm... " >&6; }
+!   if test "$cross_compiling" = yes; then :
+!   ceil_lib=none
+! else
+!   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+! /* end confdefs.h.  */
+! 
+! #ifdef HAVE_MATH_H
+! #include <math.h>
+! #endif
+! 
+! int
+! main ()
+! {
+! 
+! double d = ceil(1.0F) + floor(1.0F) + round(1.0F);
+! 
+!   ;
+!   return 0;
+! }
+! _ACEOF
+! if ac_fn_c_try_run "$LINENO"; then :
+!   { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+! $as_echo "yes" >&6; }
+!      need_libm=1
+!      ceil_lib=libm
+! else
+!   { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+! $as_echo "no" >&6; }
+! fi
+! rm -f core *.core core.conftest.* gmon.out bb.out conftest$ac_exeext \
+!   conftest.$ac_objext conftest.beam conftest.$ac_ext
+! fi
+! 
+!   LIBS="$oLIBS"
+! fi
+! if test $ceil_lib = none; then
+!   as_fn_error $? "Could not find ceil, floor, round in default libs or with -lm" "$LINENO" 5
+! fi
+! if test $need_libm = 1; then
+!   RASQAL_EXTERNAL_LIBS="$RASQAL_EXTERNAL_LIBS -lm"
+! fi
+  
+  
+  DECIMAL_INCLUDES=
+--- 13796,13802 ----
+  
+  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for ceil, floor and round in default libs" >&5
+  $as_echo_n "checking for ceil, floor and round in default libs... " >&6; }
+! RASQAL_EXTERNAL_LIBS="$RASQAL_EXTERNAL_LIBS -lm"
+  
+  
+  DECIMAL_INCLUDES=

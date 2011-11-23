@@ -1,0 +1,19 @@
+*** fam-2.7.0/src/IMon.c++.org	2011-10-27 10:10:54.660255779 +0800
+--- fam-2.7.0/src/IMon.c++	2011-10-27 10:11:11.392254978 +0800
+***************
+*** 40,46 ****
+  #include "Interest.h"
+  #include "Log.h"
+  #include "Scheduler.h"
+! #include "alloc.h"
+  
+  int		   IMon::imonfd = -2;
+  IMon::EventHandler IMon::ehandler = NULL;
+--- 40,46 ----
+  #include "Interest.h"
+  #include "Log.h"
+  #include "Scheduler.h"
+! //#include "alloc.h"
+  
+  int		   IMon::imonfd = -2;
+  IMon::EventHandler IMon::ehandler = NULL;

@@ -1,0 +1,7 @@
+config BR2_PACKAGE_LIBGSF
+	bool "libgsf"
+	help
+	  'libgsf' is a simple i/o library that can read and write common file types and handle structured formats that provide file-system-in-a-file semantics. There are some additional utilities for document centric applications.
+
+	  http://libgsf.sourceforge.net/
+

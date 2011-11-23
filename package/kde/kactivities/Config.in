@@ -1,0 +1,7 @@
+config BR2_PACKAGE_KACTIVITIES
+	bool "kactivities"
+	help
+	  API for using and interacting with Activities as a consumer, application adding information to them or as an activity manager.
+
+	  https://projects.kde.org/projects/kde/kdelibs/kactivities
+

@@ -1,0 +1,7 @@
+config BR2_PACKAGE_LINUX_PAM
+	bool "Linux PAM"
+	help
+	  TPAM provides a way to develop programs that are independent of authentication scheme.
+
+	  http://ftp.roedu.net/linux/libs/pam/
+

@@ -1,0 +1,8 @@
+config BR2_PACKAGE_HUNPN
+	bool "hupnp"
+#	depends on BR2_PACKAGE_QT && BR2_PACKAGE_AUTOMOC4
+	help
+	  Herqq UPnP (HUPnP) is a software library for building UPnP devices and control points conforming to the UPnP Device Architecture version 1.1. It is built using the Qt framework and it enables truly rapid UPnP development.
+
+	  http://www.herqq.org/
+

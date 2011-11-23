@@ -1,0 +1,53 @@
+comment "KDE Support"
+	depends on !BR2_PACKAGE_QT
+
+menuconfig BR2_PACKAGE_KSUPPORT
+	bool "KDE support libraries"
+	depends on BR2_PACKAGE_QT
+	help
+		The current official Software Compilation consists of the following packages, many of which contain multiple applications and/or libraries:
+		KDE-Libs: The software libraries that compose the KDE Developer Platform, required by all KDE applications.
+		KDE-Base:
+			Runtime: Additional software components required by many KDE Applications to perform properly.
+			Applications: Applications that are central to a basic desktop experience, such as a file manager or web browser.
+			Workspace: The KDE Workspaces that provide the tools and user environments for a Desktop, Netbook or Mobile experience
+		KDE-Plasma-Addons: Additional themes and applets for the desktop and panel.
+		KDE-Network: Networking applications such as an instant messenger and download manager.
+		KDE-Pim: Mail client, addressbook, organizer and groupware integration.
+		KDE-Graphics: Document viewer, image viewer and selected other graphics applications.
+		KDE-Multimedia: Includes a video player as well as different audio players.
+		Phonon: Multimedia layer that supports different backends, on different operating systems, for multimedia output.
+		KDE-Accessibility: Applications to improve computer access for disabled people such as a text-to-speech system.
+		KDE-Utilities: Useful utilities like an archiving tool and a calculator.
+		KDE-Edu: Education and science applications.
+		KDE-Games: Classic and modern games.
+		KDE-Toys: KDE's fun stuff.
+		KDE-Artwork: Additional icons, styles, wallpapers, screensavers and window decorations.
+		KDE-Admin: Various tools to aid with system administration.
+		KDE-SDK: Script and tools which simplify development of KDE applications.
+		KDE-Bindings: bindings for various programming languages (Python, Ruby, Perl, Java...).
+
+		http://www.kde.org/
+		http://download.kde.org/mirrorstatus.html
+		http://kde.mirror.aussiehq.net.au/stable/
+		https://projects.kde.org/projects/kde
+		http://mirrors.isc.org/pub/kde/stable/
+		ftp://ftp.kde.org/pub/kde/stable/
+
+if BR2_PACKAGE_KSUPPORT
+source "package/ksupport/akonadi/Config.in"
+source "package/ksupport/attica/Config.in"
+#source "package/ksupport/automoc4/Config.in"
+source "package/ksupport/cagibi/Config.in"
+source "package/ksupport/phonon/Config.in"
+#source "package/ksupport/qca2/Config.in"
+source "package/ksupport/polkit-qt-1/Config.in"
+source "package/ksupport/prison/Config.in"
+#source "package/ksupport/qimageblitz/Config.in"
+source "package/ksupport/libqzeitgeist/Config.in"
+#source "package/ksupport/qttools/Config.in"
+#source "package/ksupport/qtdata/Config.in"
+source "package/ksupport/soprano/Config.in"
+source "package/ksupport/strigi/Config.in"
+#source "package/ksupport/extra-cmake/Config.in"
+endif

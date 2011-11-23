@@ -1,0 +1,7 @@
+config BR2_PACKAGE_QJSON
+	bool "qjson"
+	help
+	   JSON (JavaScript Object Notation) is a lightweight data-interchange format. It can represents integer, real number, string, an ordered sequence of value, and a collection of name/value pairs.
+
+	  http://gitorious.org/qjson
+

@@ -1,0 +1,19 @@
+*** openldap-2.4.26/build/top.mk.org	2011-11-01 14:17:51.385660995 +0800
+--- openldap-2.4.26/build/top.mk	2011-11-01 14:18:50.677660994 +0800
+***************
+*** 59,65 ****
+  INSTALL_DATA = $(INSTALL) -m 644
+  INSTALL_SCRIPT = $(INSTALL)
+  
+! STRIP = -s
+  
+  LINT = lint
+  5LINT = 5lint
+--- 59,65 ----
+  INSTALL_DATA = $(INSTALL) -m 644
+  INSTALL_SCRIPT = $(INSTALL)
+  
+! STRIP = 
+  
+  LINT = lint
+  5LINT = 5lint

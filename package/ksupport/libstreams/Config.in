@@ -1,0 +1,7 @@
+config BR2_PACKAGE_LIBSTREAMS
+	bool "libstreams"
+	help
+	  Strigi libstreams.
+
+	  https://projects.kde.org/projects/kdesupport/strigi
+

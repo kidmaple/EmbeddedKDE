@@ -1,0 +1,7 @@
+config BR2_PACKAGE_RAPTOR
+	bool "raptor"
+	help
+	  Redland is a set of free software C libraries that provide support for the Resource Description Framework (RDF).
+
+	  http://librdf.org/
+

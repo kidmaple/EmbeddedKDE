@@ -1,0 +1,15 @@
+akonadi
+attica
+automoc4
+cagibi
+emerge
+kdewin
+phonon
+polkit-qt-1
+prison
+qtdata
+qttools
+qt_zeitgeist
+soprano
+strigi
+xcmake

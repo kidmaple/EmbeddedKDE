@@ -1,0 +1,7 @@
+config BR2_PACKAGE_EXIV2
+	bool "exiv2"
+	help
+	  The Free Association project maintains exiv2, an open source reference implementation of the icalendar data type and serialization format. exiv2 is used in dozens of calendaring and scheduling products.
+
+	  http://sourceforge.net/projects/freeassociation/
+

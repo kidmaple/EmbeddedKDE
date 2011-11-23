@@ -1,0 +1,96 @@
+*** raptor2-2.0.4.org/configure	2011-07-25 06:29:02.000000000 +0800
+--- raptor2-2.0.4/configure	2011-10-26 17:36:23.732255014 +0800
+***************
+*** 13291,13374 ****
+  
+  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for trunc and round in default libs" >&5
+  $as_echo_n "checking for trunc and round in default libs... " >&6; }
+! trunc_round_lib=none
+! if test "$cross_compiling" = yes; then :
+!   trunc_round_lib=none
+! else
+!   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+! /* end confdefs.h.  */
+! 
+! #ifdef HAVE_MATH_H
+! #include <math.h>
+! #endif
+! 
+! int
+! main ()
+! {
+! 
+! double d = trunc(1.0F) + round(1.0F);
+! 
+!   ;
+!   return 0;
+! }
+! _ACEOF
+! if ac_fn_c_try_run "$LINENO"; then :
+!   { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+! $as_echo "yes" >&6; }
+!    trunc_round_lib=libc
+! else
+!   { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+! $as_echo "no" >&6; }
+! fi
+! rm -f core *.core core.conftest.* gmon.out bb.out conftest$ac_exeext \
+!   conftest.$ac_objext conftest.beam conftest.$ac_ext
+! fi
+! 
+! if test $trunc_round_lib = none; then
+!   LIBS="$LIBS -lm"
+!   { $as_echo "$as_me:${as_lineno-$LINENO}: checking for trunc and round with -lm" >&5
+! $as_echo_n "checking for trunc and round with -lm... " >&6; }
+!   if test "$cross_compiling" = yes; then :
+!   trunc_round_lib=none
+! else
+!   cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+! /* end confdefs.h.  */
+! 
+! #ifdef HAVE_MATH_H
+! #include <math.h>
+! #endif
+! 
+! int
+! main ()
+! {
+! 
+! double d = trunc(1.0F) + round(1.0F);
+! 
+!   ;
+!   return 0;
+! }
+! _ACEOF
+! if ac_fn_c_try_run "$LINENO"; then :
+!   { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+! $as_echo "yes" >&6; }
+!      need_libm=1
+!      trunc_round_lib=libm
+! else
+!   { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+! $as_echo "no" >&6; }
+! fi
+! rm -f core *.core core.conftest.* gmon.out bb.out conftest$ac_exeext \
+!   conftest.$ac_objext conftest.beam conftest.$ac_ext
+! fi
+! 
+!   LIBS="$oLIBS"
+! fi
+! if test $trunc_round_lib = none; then
+!   as_fn_error $? "Could not find trunc and round in default libs or with -lm" "$LINENO" 5
+! fi
+! if test $need_libm = 1; then
+!   RAPTOR_LDFLAGS="$RAPTOR_LDFLAGS -lm"
+! fi
+  
+  # Check whether --enable-largefile was given.
+  if test "${enable_largefile+set}" = set; then :
+--- 13291,13297 ----
+  
+  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for trunc and round in default libs" >&5
+  $as_echo_n "checking for trunc and round in default libs... " >&6; }
+! RAPTOR_LDFLAGS="$RAPTOR_LDFLAGS -lm"
+  
+  # Check whether --enable-largefile was given.
+  if test "${enable_largefile+set}" = set; then :

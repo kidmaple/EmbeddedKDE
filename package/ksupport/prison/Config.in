@@ -1,0 +1,8 @@
+config BR2_PACKAGE_PRISON
+	bool "prison"
+#	depends on BR2_PACKAGE_QT && BR2_PACKAGE_AUTOMOC4
+	help
+	  prison is a barcode api currently offering a nice Qt api to produce QRCode barcodes and DataMatrix barcodes, and can easily be made support more.
+
+	  http://kde.mirror.aussiehq.net.au/stable/cagibi/
+

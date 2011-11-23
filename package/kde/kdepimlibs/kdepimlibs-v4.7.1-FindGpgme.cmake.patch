@@ -1,0 +1,19 @@
+*** kdepimlibs-v4.7.1/cmake/modules/FindGpgme.cmake.org	2011-11-02 10:45:58.673660997 +0800
+--- kdepimlibs-v4.7.1/cmake/modules/FindGpgme.cmake	2011-11-01 16:51:34.745660995 +0800
+***************
+*** 76,82 ****
+      set( GPGME_PTHREAD_FOUND false )
+      set( GPGME_PTH_FOUND     false )
+  
+!     find_program( _GPGMECONFIG_EXECUTABLE NAMES gpgme-config)
+      message( STATUS "ddddddddddddddddddddddddddddddddddddd ${_GPGMECONFIG_EXECUTABLE}" )
+  
+      # if gpgme-config has been found
+--- 76,82 ----
+      set( GPGME_PTHREAD_FOUND false )
+      set( GPGME_PTH_FOUND     false )
+  
+!     find_program( _GPGMECONFIG_EXECUTABLE NAMES gpgme-config  PATHS /home/yeek/kdedev/output/staging/usr/bin)
+      message( STATUS "ddddddddddddddddddddddddddddddddddddd ${_GPGMECONFIG_EXECUTABLE}" )
+  
+      # if gpgme-config has been found

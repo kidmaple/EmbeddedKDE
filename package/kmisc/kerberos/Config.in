@@ -1,0 +1,7 @@
+config BR2_PACKAGE_KERBEROS
+	bool "kerberos"
+	help
+	  Kerberos is a network authentication protocol. It is designed to provide strong authentication for client/server applications by using secret-key cryptography. A free implementation of this protocol is available from the Massachusetts Institute of Technology.
+
+	  http://web.mit.edu/kerberos/www/
+

@@ -1,0 +1,49 @@
+#############################################################
+#
+# WV2
+#
+#
+#############################################################
+WV2_VERSION:=0.4.2
+WV2_SOURCE:=wv2-${WV2_VERSION}.tar.bz2
+WV2_SITE:=http://dl.sourceforge.net/sourceforge/wvware/
+#WV2_DEPENDENCIES:= bash binutils bzip2 coreutils diffutils file findutils gcc glib glibc
+#grep libgsf libxml linux-header make mktemp net-tools pkgconfig sed sysfiles tar util-linux zlib 
+#missed: libgsf linux-header make mktemp tar net-tools sysfiles
+WV2_DEPENDENCIES:= diffutils file findutils libglib2 grep libxml2 util-linux
+WV2_INSTALL_STAGING=YES
+WV2_INSTALL_TARGET=YES
+WV2_AUTORECONF=YES
+
+define WV2_CONFIGURE_CMDS
+	(cd $(@D)/src; rm -rf config.cache; \
+		./autogen.sh; \
+		$(TARGET_CONFIGURE_OPTS) \
+		$(TARGET_CONFIGURE_ARGS) \
+		CFLAGS="$(TARGET_CFLAGS)" \
+		./configure $(QUIET) \
+		--target=$(GNU_TARGET_NAME) \
+		--host=$(GNU_TARGET_NAME) \
+		--build=$(GNU_HOST_NAME) \
+		--prefix=/usr \
+	)
+endef
+
+define WV2_BUILD_CMDS
+        $(MAKE) -C $(@D)
+endef
+
+define WV2_INSTALL_STAGING_CMDS
+	$(MAKE) -C $(@D) DESTDIR=$(XSTAGING_DIR)/wv install
+endef
+
+define WV2_INSTALL_TARGET_CMDS
+	( \
+		mkdir -p $(XTARGET_DIR)/wv/usr; \
+		cp -r $(XSTAGING_DIR)/wv/usr/bin $(XTARGET_DIR)/wv/usr; \
+		cp -r $(XSTAGING_DIR)/wv/usr/lib $(XTARGET_DIR)/wv/usr \
+	)
+endef
+
+$(eval $(call GENTARGETS,xpackage,wv2))
+

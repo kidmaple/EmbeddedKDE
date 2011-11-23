@@ -1,0 +1,8 @@
+config BR2_PACKAGE_LIBWPD
+	bool "libwpd"
+	help
+	  libwpd is a C++ library designed to help process WordPerfect documents. It is most commonly used to import WordPerfect documents into other word processors (see below), but may be useful in other cases as well.
+libwpd exposes a simple callback-based API (similar to SAX), allowing it to be easily plugged into any C or C++ application.
+
+	  http://libwpd.sourceforge.net/
+

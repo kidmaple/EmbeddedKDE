@@ -1,0 +1,18 @@
+*** kdepimlibs-v4.7.1/CMakeLists.txt.org	2011-11-01 13:27:02.429660996 +0800
+--- kdepimlibs-v4.7.1/CMakeLists.txt	2011-11-01 13:27:08.241660997 +0800
+***************
+*** 1,7 ****
+  project(kdepimlibs)
+  
+  # where to look first for cmake modules. This line must be the first one or cmake will use the system's FindFoo.cmake
+! set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/modules")
+  
+  
+  ############### The kdepimlibs version (used e.g. in KdepimLibsConfig.cmake) ###############
+--- 1,7 ----
+  project(kdepimlibs)
+  
+  # where to look first for cmake modules. This line must be the first one or cmake will use the system's FindFoo.cmake
+! set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/modules" "/home/yeek/kdedev/output/staging/usr/share/apps/cmake/modules")
+  
+  ############### The kdepimlibs version (used e.g. in KdepimLibsConfig.cmake) ###############

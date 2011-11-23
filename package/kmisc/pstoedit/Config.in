@@ -1,0 +1,7 @@
+config BR2_PACKAGE_PSTOEDIT
+	bool "pstoedit"
+	help
+	  pstoedit translates PostScript and PDF graphics into other vector formats.
+
+	  http://www.pstoedit.net/
+

@@ -1,0 +1,7 @@
+config BR2_PACKAGE_EXTRA_CMAKE
+	bool "Extra Cmake"
+	help
+	  Extra modules and scripts for CMake
+
+	  https://projects.kde.org/projects/kdesupport/extra-cmake-modules
+

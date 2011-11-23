@@ -1,0 +1,7 @@
+config BR2_PACKAGE_STRIGIDAEMON
+	bool "strigidaemon"
+	help
+	  Strigi strigidaemon.
+
+	  https://projects.kde.org/projects/kdesupport/strigi
+

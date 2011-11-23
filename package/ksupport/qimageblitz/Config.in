@@ -1,0 +1,8 @@
+config BR2_PACKAGE_QIMAGEBLITZ
+	bool "qimageblitz"
+#	depends on BR2_PACKAGE_QT
+	help
+	  automoc4 is a tool to add rules for generating Qt moc files automatically to projects that use CMake as the buildsystem.
+
+	  http://mirrors.isc.org/pub/kde/stable/automoc4/
+

@@ -1,0 +1,8 @@
+config BR2_PACKAGE_GRANTLEE
+	bool "grantlee"
+	help
+	  Grantlee is a set of Free Software libraries written using the Qt framework.
+	  Currently two libraries are shipped with Grantlee: Grantlee Templates and Grantlee TextDocument.
+
+	  https://projects.kde.org/projects/kde/kdelibs/grantlee
+

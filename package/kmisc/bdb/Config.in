@@ -1,0 +1,7 @@
+config BR2_PACKAGE_BDB
+	bool "bdb"
+	help
+	  Berkley DB is a set of DB libraries for many types of standard DB table systems. It has a C and C++ interface.
+
+	  http://www.oracle.com/technology/products/berkeley-db/
+

@@ -1,0 +1,7 @@
+config BR2_PACKAGE_NEPOMUK_CORE
+	bool "nepomuk core"
+	help
+	   The core Nepomuk system contains of the central services like file indexing, file system monitoring, query, and of course storage, as well as the corresponding client libraries.
+
+	  http://dev.nepomuk.semanticdesktop.org/
+

@@ -1,0 +1,8 @@
+config BR2_PACKAGE_KDEWORKSPACE
+	bool "kdeworkspace"
+#	depends on BR2_PACKAGE_QT && BR2_PACKAGE_AUTOMOC4
+	help
+	  Provides the interface and basic tools for the KDE workspace.
+
+	  http://kde.mirror.aussiehq.net.au/stable/4.7.1/src/
+

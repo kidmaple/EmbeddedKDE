@@ -1,0 +1,8 @@
+config BR2_PACKAGE_LIBQZEITGEIST
+	bool "Qt Zeigeist"
+	help
+	  A Qt interface to the Zeitgeist event tracking system
+
+	  https://projects.kde.org/projects/kdesupport/libqzeitgeist
+
+

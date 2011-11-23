@@ -1,0 +1,9 @@
+config BR2_PACKAGE_KDELIBS
+	bool "kdelibs"
+	help
+	  The KDE Library.Sub Projects:
+		Activities Library 
+		Nepomuk Core 
+
+	  http://kde.mirror.aussiehq.net.au/stable/4.7.1/src/
+

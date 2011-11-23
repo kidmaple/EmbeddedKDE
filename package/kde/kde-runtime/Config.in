@@ -1,0 +1,8 @@
+config BR2_PACKAGE_KDE_RUNTIME
+	bool "kde-runtime"
+#	depends on BR2_PACKAGE_QT && BR2_PACKAGE_AUTOMOC4
+	help
+	  Plugins and applications necessary for the running of KDE applications.
+
+	  http://kde.mirror.aussiehq.net.au/stable/4.7.1/src/
+

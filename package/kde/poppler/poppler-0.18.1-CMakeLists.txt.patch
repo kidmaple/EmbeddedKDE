@@ -1,0 +1,19 @@
+*** poppler-poppler-0.18.1/CMakeLists.txt.org	2011-11-07 13:54:26.969137615 +0800
+--- poppler-poppler-0.18.1/CMakeLists.txt	2011-11-07 13:55:17.437138933 +0800
+***************
+*** 20,26 ****
+  set(POPPLER_VERSION "${POPPLER_MAJOR_VERSION}.${POPPLER_MINOR_VERSION}.${POPPLER_MICRO_VERSION}")
+  
+  # command line switches
+! option(ENABLE_XPDF_HEADERS "Install unsupported xpdf headers." OFF)
+  option(BUILD_GTK_TESTS "Whether compile the GTK+ test programs." ON)
+  option(BUILD_QT4_TESTS "Whether compile the Qt4 test programs." ON)
+  option(BUILD_CPP_TESTS "Whether compile the CPP test programs." ON)
+--- 20,26 ----
+  set(POPPLER_VERSION "${POPPLER_MAJOR_VERSION}.${POPPLER_MINOR_VERSION}.${POPPLER_MICRO_VERSION}")
+  
+  # command line switches
+! option(ENABLE_XPDF_HEADERS "Install unsupported xpdf headers." ON)
+  option(BUILD_GTK_TESTS "Whether compile the GTK+ test programs." ON)
+  option(BUILD_QT4_TESTS "Whether compile the Qt4 test programs." ON)
+  option(BUILD_CPP_TESTS "Whether compile the CPP test programs." ON)

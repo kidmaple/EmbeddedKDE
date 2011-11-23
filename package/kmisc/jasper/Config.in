@@ -1,0 +1,8 @@
+config BR2_PACKAGE_JASPER
+	bool "jasper"
+
+	help
+	  This distribution contains the public release of the an open-source implementation of the ISO/IEC 15444-1 
+	  also known as JPEG-2000 standard for image compression.
+
+	http://www.ece.uvic.ca/~mdadams/jasper/

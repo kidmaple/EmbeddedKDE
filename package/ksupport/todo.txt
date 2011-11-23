@@ -1,0 +1,8 @@
+- akonadi-v1.6.0
+  Fixed the default qt plugins path:
+  $(STAGING_DIR)/usr/lib/qt4/plugins/sqldrivers
+
+- kdelibs
+  swpb .....
+
+

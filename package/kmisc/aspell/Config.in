@@ -1,0 +1,7 @@
+config BR2_PACKAGE_ASPELL
+	bool "aspell"
+
+	help
+	  It can either be used as a library or as an independent spell checker.
+
+	http://aspell.net/

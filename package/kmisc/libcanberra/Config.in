@@ -1,0 +1,7 @@
+config BR2_PACKAGE_LIBCANBERRA
+	bool "libcanberra"
+	help
+	  libcanberra is an implementation of the XDG Sound Theme and Name Specifications, for generating event sounds on free desktops, such as GNOME. It comes with several backends (ALSA, PulseAudio, OSS, GStreamer, null) and is designed to be portable.
+
+	  http://0pointer.de/lennart/projects/libcanberra/
+

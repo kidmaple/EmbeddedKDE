@@ -1,0 +1,19 @@
+*** openexr-1.7.0/configure.org	2011-10-31 10:42:00.673660589 +0800
+--- openexr-1.7.0/configure	2011-10-31 10:42:08.653661006 +0800
+***************
+*** 18869,18875 ****
+        TEST_CXXFLAGS="$TEST_CXXFLAGS -I$test_prefix/include/$inc_dir"
+     done
+     TEST_LDFLAGS="-L$test_prefix/lib"
+!    TEST_LDFLAGS="$TEST_LDFLAGS $LIB64_IF_EXISTS -L/usr/local/lib"
+     TEST_LIBS="-lImath -lHalf -lIex -lIlmThread -lpthread"
+  else
+                             if test x$PKG_CONFIG != xno ; then
+--- 18869,18875 ----
+        TEST_CXXFLAGS="$TEST_CXXFLAGS -I$test_prefix/include/$inc_dir"
+     done
+     TEST_LDFLAGS="-L$test_prefix/lib"
+! #   TEST_LDFLAGS="$TEST_LDFLAGS $LIB64_IF_EXISTS -L/usr/local/lib"
+     TEST_LIBS="-lImath -lHalf -lIex -lIlmThread -lpthread"
+  else
+                             if test x$PKG_CONFIG != xno ; then

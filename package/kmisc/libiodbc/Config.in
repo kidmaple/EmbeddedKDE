@@ -1,0 +1,7 @@
+config BR2_PACKAGE_LIBIODBC
+	bool "libiodbc"
+	help
+	  Independent Open DataBase Connectivity for Linux, MacOS X and Unix systems.
+
+	  http://www.iodbc.org/dataspace/iodbc/wiki/iODBC/
+

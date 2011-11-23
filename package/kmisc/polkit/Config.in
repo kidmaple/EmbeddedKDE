@@ -1,0 +1,7 @@
+config BR2_PACKAGE_POLKIT
+	bool "Polkit"
+	help
+	  The OpenLDAP Project is a collaborative effort to develop a robust, commercial-grade, fully featured, and open source LDAP suite of applications and development tools. The project is managed by a worldwide community of volunteers that use the Internet to communicate, plan, and develop the OpenLDAP Suite and its related documentation.
+
+	  http://www.openldap.org/
+
