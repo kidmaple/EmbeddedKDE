@@ -56,8 +56,17 @@ $(2)_INSTALL_STAGING_OPT	?= DESTDIR=$$(STAGING_DIR) install
 $(2)_INSTALL_TARGET_OPT		?= DESTDIR=$$(TARGET_DIR) install
 $(2)_CLEAN_OPT			?= clean
 
+ifdef $(3)_SUBDIR
 $(2)_SRCDIR			= $$($(2)_DIR)/$($(2)_SUBDIR)
+else
+$(2)_SRCDIR			= $$($(2)_DIR)
+endif
+
+ifeq ($$($(2)_EXTERNAL_BUILD),YES)
+$(2)_BUILDDIR			= $$($(2)_SRCDIR)/build
+else
 $(2)_BUILDDIR			= $$($(2)_SRCDIR)
+endif
 
 #
 # Configure step. Only define it if not already defined by the package
@@ -69,7 +78,8 @@ ifeq ($(5),target)
 
 # Configure package for target
 define $(2)_CONFIGURE_CMDS
-	(cd $$($$(PKG)_BUILDDIR) && \
+	( if ! [ -d $$($(2)_BUILDDIR) ]; then mkdir -p $$($(2)_BUILDDIR); fi; \
+	cd $$($$(PKG)_BUILDDIR) && \
 	rm -f CMakeCache.txt && \
 	$$($$(PKG)_CONF_ENV) $(HOST_DIR)/usr/bin/cmake $$($$(PKG)_SRCDIR) \
 		-DCMAKE_TOOLCHAIN_FILE="$$(BASE_DIR)/toolchainfile.cmake" \
