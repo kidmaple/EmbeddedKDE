@@ -1,4 +1,0 @@
-config BR2_PACKAGE_BOOST_JAM
-	bool "boost-jam"
-	help
-	  boost-jam app for the host. needed to build boost

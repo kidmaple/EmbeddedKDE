@@ -5,13 +5,13 @@
 ###############################################################################
 PHONON_VERSION = 4.5.0
 PHONON_SITE = git://anongit.kde.org/phonon
-PHONON_EXTERNAL_BUILD = YES
+
 PHONON_INSTALL_STAGING = YES
-PHONON_INSTALL_TARGET = NO
+PHONON_EXTERNAL_BUILD = YES
 PHONON_AUTORECONF = NO
 #PHONON_CONF_ENV = QT_PLUGIN_PATH=$(STAGING_DIR)/usr/lib/qt/plugins
-#PHONON_CONF_OPT = -DBUILD_DEMOS=ON
-PHONON_DEPENDENCIES = qt automoc4 qimageblitz libxml2 gstreamer
+PHONON_CONF_OPT = -DCMAKE_INSTALL_PREFIX=$(STAGING_DIR)/usr
+PHONON_DEPENDENCIES = qt automoc4 qimageblitz libxml2 gstreamer pulseaudio libqzeitgeist
 
 $(eval $(call CMAKETARGETS,package,phonon))
 

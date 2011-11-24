@@ -3,6 +3,5 @@ config BR2_PACKAGE_PHONON
 	help
 	  The Phonon multimedia library and its backend plugins.
 
-	  https://projects.kde.org/projects/kdesupport/akonadi
-	  http://pim.kde.org/akonadi/
+	  http://phonon.kde.org/
 

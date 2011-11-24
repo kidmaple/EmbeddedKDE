@@ -9,14 +9,15 @@ AKONADI_AUTORECONF = NO
 
 AKONADI_EXTERNAL_BUILD = YES
 AKONADI_INSTALL_STAGING = YES
-AKONADI_INSTALL_TARGET = NO
 
-AKONADI_CONF_ENV = QT_PLUGIN_PATH=$(STAGING_DIR)/usr/lib/qt/plugins
-AKONADI_CONF_OPT = -DQT_DBUSXML2CPP_EXECUTABLE="/usr/bin/qdbusxml2cpp" \
-		-DQT_DBUSCPP2XML_EXECUTABLE="/usr/bin/qdbuscpp2xml" 
+AKONADI_CONF_ENV = QT_PLUGIN_PATH="$(STAGING_DIR)/usr/lib/qt/plugins"
+AKONADI_CONF_OPT = \
+	-DQT_DBUSXML2CPP_EXECUTABLE="/usr/bin/qdbusxml2cpp" \
+	-DQT_DBUSCPP2XML_EXECUTABLE="/usr/bin/qdbuscpp2xml" \
+	-DCMAKE_INSTALL_PREFIX=$(STAGING_DIR)/usr
 
 #AKONADI_DEPENDENCIES = qt automoc4 boost soprano kdelibs libgd libice libx11 libxau libxcb libxdmcp libxext libxslt qimageblitz
-AKONADI_DEPENDENCIES = qt automoc4 boost soprano sqlite
+AKONADI_DEPENDENCIES = qt automoc4 boost sqlite soprano
 
 $(eval $(call CMAKETARGETS))
 

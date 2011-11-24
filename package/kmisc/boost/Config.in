@@ -1,5 +1,0 @@
-config BR2_PACKAGE_BOOST
-	bool "boost"
-    select BR2_PACKAGE_BOOST_JAM
-	help
-	  boost

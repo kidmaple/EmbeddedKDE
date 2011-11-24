@@ -6,9 +6,9 @@
 LINUX_PAM_VERSION = 1.1.4
 LINUX_PAM_SOURCE = Linux-PAM-$(LINUX_PAM_VERSION).tar.gz
 LINUX_PAM_SITE = http://ftp.roedu.net/linux/libs/pam/library
-LINUX_PAM_DEPENDENCIES =
+
+LINUX_PAM_DEPENDENCIES = flex
 LINUX_PAM_INSTALL_STAGING = YES
-LINUX_PAM_INSTALL_TARGET = NO
 
 define LINUX_PAM_CONFIGURE_CMDS
 	(cd $(@D); rm -rf config.cache; \
@@ -34,7 +34,7 @@ define LINUX_PAM_INSTALL_STAGING_CMDS
 endef
 
 define LINUX_PAM_INSTALL_TARGET_CMDS
-	( )
+	$(MAKE) -C $(@D) DESTDIR=$(TARGET_DIR) install
 endef
 
 $(eval $(call GENTARGETS,package/kde,linux-pam))

@@ -4,9 +4,12 @@
 #
 ################################################################################
 
-PULSEAUDIO_VERSION = 1.0
+PULSEAUDIO_VERSION = 1.1
 PULSEAUDIO_SITE = http://freedesktop.org/software/pulseaudio/releases/
+PULSEAUDIO_SOURCE = pulseaudio-$(PULSEAUDIO_VERSION).tar.xz
+
 PULSEAUDIO_INSTALL_STAGING = YES
+
 PULSEAUDIO_CONF_OPT = \
 	--localstatedir=/var \
 	--disable-default-build-tests \

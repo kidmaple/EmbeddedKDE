@@ -12,7 +12,9 @@ UDEV_CONF_OPT =			\
 	--sbindir=/sbin		\
 	--with-rootlibdir=/lib	\
 	--libexecdir=/lib/udev	\
-	--disable-introspection
+	--disable-introspection \
+	--with-sysroot=$(STAGING_DIR) \
+	--without-html-dir
 
 UDEV_DEPENDENCIES = host-gperf host-pkg-config
 
