@@ -1,0 +1,37 @@
+- check all the packages about: xxx_INSTALL_TARGET_CMDS
+- check all the packages about: PHONON_INSTALL_TARGET = NO
+- boost
+  > Patch for boost_1_45_0/tools/build/v2/build/configure.jam isn't work
+  > Warning: swp{b} use is deprecated for this architecture
+- hspell
+  > find_size
+  > hspell
+- osaf
+  > Fix the path of /usr/share/cmake/ShareDesktopOntologies/*.cmake
+  > Fix the path of /usr/share/ontology/
+- PolkitQt-1
+  > $(...)/staging/usr/lib/cmake/PolkitQt-1/PolkitQt-1Config.cmake:  POLKITQT-1_INSTALL_DIR
+- shared-mime-info
+  > path information
+- kdelibs
+  > Cross-compiling the following:
+      set(KDE4_ICEMAKER_EXECUTABLE          ${EXECUTABLE_OUTPUT_PATH}/icemaker${CMAKE_EXECUTABLE_SUFFIX}.shell )
+      set(KDE4_DOCBOOKL10NHELPER_EXECUTABLE ${EXECUTABLE_OUTPUT_PATH}/docbookl10nhelper${CMAKE_EXECUTABLE_SUFFIX}.shell )
+      set(KDE4_KCFGC_EXECUTABLE             ${EXECUTABLE_OUTPUT_PATH}/kconfig_compiler${CMAKE_EXECUTABLE_SUFFIX}.shell )
+      set(KDE4_KAUTH_POLICY_GEN_EXECUTABLE  ${EXECUTABLE_OUTPUT_PATH}/kauth-policy-gen${CMAKE_EXECUTABLE_SUFFIX}.shell )
+      set(KDE4_MEINPROC_EXECUTABLE          ${EXECUTABLE_OUTPUT_PATH}/meinproc4${CMAKE_EXECUTABLE_SUFFIX}.shell )
+      set(KDE4_MAKEKDEWIDGETS_EXECUTABLE    ${EXECUTABLE_OUTPUT_PATH}/makekdewidgets${CMAKE_EXECUTABLE_SUFFIX}.shell )
+  >
+
+
+
+
+
+
+
+
+
+
+
+
+

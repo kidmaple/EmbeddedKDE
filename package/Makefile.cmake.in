@@ -62,7 +62,7 @@ else
 $(2)_SRCDIR			= $$($(2)_DIR)
 endif
 
-ifeq ($$($(2)_EXTERNAL_BUILD),YES)
+ifeq ($$($(3)_EXTERNAL_BUILD),YES)
 $(2)_BUILDDIR			= $$($(2)_SRCDIR)/build
 else
 $(2)_BUILDDIR			= $$($(2)_SRCDIR)
@@ -91,9 +91,10 @@ else
 
 # Configure package for host
 define $(2)_CONFIGURE_CMDS
-	(cd $$($$(PKG)_BUILDDIR) && \
+	(if ! [ -d $$($(2)_BUILDDIR) ]; then mkdir -p $$($(2)_BUILDDIR); fi; \
+	cd $$($$(PKG)_BUILDDIR) && \
 	rm -f CMakeCache.txt && \
-	$(HOST_DIR)/usr/bin/cmake $$($$(PKG)_SRCDIR) \
+	$$($(3)_HOST_CONF_ENV) $(HOST_DIR)/usr/bin/cmake $$($$(PKG)_SRCDIR) \
 		-DCMAKE_INSTALL_SO_NO_EXE=0 \
 		-DCMAKE_FIND_ROOT_PATH="$$(HOST_DIR)" \
 		-DCMAKE_FIND_ROOT_PATH_MODE_PROGRAM="BOTH" \
