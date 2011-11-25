@@ -3,9 +3,10 @@
 # libwpd - http://kent.dl.sourceforge.net/project/libwpd/libwpd/libwpd-0.9.3/libwpd-0.9.3.tar.gz
 #
 ###############################################################################
-LIBWPD_VERSION = 0.8.14
+LIBWPD_VERSION = 0.9.3
 LIBWPD_SOURCE = libwpd-$(LIBWPD_VERSION).tar.gz
 LIBWPD_SITE = http://kent.dl.sourceforge.net/project/libwpd/libwpd/libwpd-$(LIBWPD_VERSION)
+
 LIBWPD_DEPENDENCIES = 
 LIBWPD_INSTALL_STAGING = YES
 LIBWPD_INSTALL_TARGET = NO
@@ -20,6 +21,7 @@ define LIBWPD_CONFIGURE_CMDS
 		--host=$(GNU_TARGET_NAME) \
 		--build=$(GNU_HOST_NAME) \
 		--prefix=/usr \
+		--with-stream \
 	)
 endef
 

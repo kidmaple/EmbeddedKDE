@@ -3,7 +3,7 @@
 # libwpg - http://kent.dl.sourceforge.net/project/libwpg/libwpg/libwpg-0.2.0/libwpg-0.2.0.tar.gz
 #
 ###############################################################################
-LIBWPG_VERSION = 0.1.3
+LIBWPG_VERSION = 0.2.1
 LIBWPG_SOURCE = libwpg-$(LIBWPG_VERSION).tar.gz
 LIBWPG_SITE = http://kent.dl.sourceforge.net/project/libwpg/libwpg/libwpg-$(LIBWPG_VERSION)
 LIBWPG_DEPENDENCIES = libwpd
