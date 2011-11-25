@@ -1,0 +1,34 @@
+*** kdepimlibs-v4.7.1/kcalcore/icalformat_p.cpp.org	2011-11-25 12:11:18.445163002 +0800
+--- kdepimlibs-v4.7.1/kcalcore/icalformat_p.cpp	2011-11-25 12:11:29.709162991 +0800
+***************
+*** 806,816 ****
+    if ( att->isUri() ) {
+      attach = icalattach_new_from_url( att->uri().toUtf8().data() );
+    } else {
+- #ifdef USE_ICAL_0_46
+      attach = icalattach_new_from_data( ( const char * )att->data().data(), 0, 0 );
+- #else
+-     attach = icalattach_new_from_data( ( unsigned char * )att->data().data(), 0, 0 );
+- #endif
+    }
+    icalproperty *p = icalproperty_new_attach( attach );
+  
+--- 806,812 ----
+
+
+*** kdepimlibs-v4.7.1/kcal/icalformat_p.cpp.org	2011-11-25 12:14:15.625162992 +0800
+--- kdepimlibs-v4.7.1/kcal/icalformat_p.cpp	2011-11-25 12:14:24.505162991 +0800
+***************
+*** 784,794 ****
+    if ( att->isUri() ) {
+      attach = icalattach_new_from_url( att->uri().toUtf8().data() );
+    } else {
+- #ifdef USE_ICAL_0_46
+      attach = icalattach_new_from_data ( ( const char * )att->data(), 0, 0 );
+- #else
+-     attach = icalattach_new_from_data ( ( unsigned char * )att->data(), 0, 0 );
+- #endif
+    }
+    icalproperty *p = icalproperty_new_attach( attach );
+  
+--- 784,790 ----

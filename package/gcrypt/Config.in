@@ -1,0 +1,7 @@
+menu "Gcrypt libraries"
+source "package/gcrypt/gnupg/Config.in"
+source "package/gcrypt/gpgme/Config.in"
+source "package/gcrypt/libassuan/Config.in"
+source "package/gcrypt/libksda/Config.in"
+source "package/gcrypt/pth/Config.in"
+endmenu

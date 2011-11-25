@@ -22,7 +22,12 @@
       set(KDE4_MEINPROC_EXECUTABLE          ${EXECUTABLE_OUTPUT_PATH}/meinproc4${CMAKE_EXECUTABLE_SUFFIX}.shell )
       set(KDE4_MAKEKDEWIDGETS_EXECUTABLE    ${EXECUTABLE_OUTPUT_PATH}/makekdewidgets${CMAKE_EXECUTABLE_SUFFIX}.shell )
   >
-
+- sasl2
+  > cross-compiling include/makemd5
+- pth
+  > pth_p.h: No such file or directory
+- kdepimlibs
+  > {standard input}:13428: Warning: swp{b} use is deprecated for this architecture
 
 
 

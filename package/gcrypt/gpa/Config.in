@@ -1,0 +1,7 @@
+config BR2_PACKAGE_GPA
+	bool "GnuPG"
+	help
+	  GPA is still work in progress, so don't expect that everything works and be careful when using production quality secret keys.
+
+	  http://www.gnupg.org/related_software/gpgme/
+

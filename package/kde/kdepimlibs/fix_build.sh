@@ -1,0 +1,18 @@
+find build -name build.make | xargs sed -i -e 's/ \/usr\/bin\/meinproc4/ \/home\/yeek\/kdedev\/output\/build\/kdelibs-v4.7.1\/build\/bin\/meinproc4/g'
+find build -name build.make | xargs sed -i -e 's/ \/usr\/bin\/kconfig_compiler/ \/home\/yeek\/kdedev\/output\/build\/kdelibs-v4.7.1\/build\/bin\/kconfig_compiler/g'
+find build -name build.make | xargs sed -i -e 's/ \/usr\/bin\/makekdewidgets/ \/home\/yeek\/kdedev\/output\/build\/kdelibs-v4.7.1\/build\/bin\/makekdewidgets/g'
+
+find build -name build.make | xargs sed -i -e 's/ \/usr\/lib\/libk/ \/home\/yeek\/kdedev\/output\/staging\/usr\/lib\/libk/g'
+find build -name link.txt | xargs sed -i -e 's/ \/usr\/lib\/libk/ \/home\/yeek\/kdedev\/output\/staging\/usr\/lib\/libk/g'
+find build -name build.make | xargs sed -i -e 's/ \/usr\/lib\/libsolid/ \/home\/yeek\/kdedev\/output\/staging\/usr\/lib\/libsolid/g'
+find build -name link.txt | xargs sed -i -e 's/ \/usr\/lib\/libsolid/ \/home\/yeek\/kdedev\/output\/staging\/usr\/lib\/libsolid/g'
+find build -name build.make | xargs sed -i -e 's/ \/usr\/lib\/libakonadiprotocolinternals/ \/home\/yeek\/kdedev\/output\/staging\/usr\/lib\/libakonadiprotocolinternals/g'
+find build -name link.txt | xargs sed -i -e 's/ \/usr\/lib\/libakonadiprotocolinternals/ \/home\/yeek\/kdedev\/output\/staging\/usr\/lib\/libakonadiprotocolinternals/g'
+find build -name build.make | xargs sed -i -e 's/ \/usr\/lib\/libprison/ \/home\/yeek\/kdedev\/output\/staging\/usr\/lib\/libprison/g'
+find build -name link.txt | xargs sed -i -e 's/ \/usr\/lib\/libprison/ \/home\/yeek\/kdedev\/output\/staging\/usr\/lib\/libprison/g'
+find build -name build.make | xargs sed -i -e 's/ \/usr\/lib\/libnepomuk/ \/home\/yeek\/kdedev\/output\/staging\/usr\/lib\/libnepomuk/g'
+find build -name link.txt | xargs sed -i -e 's/ \/usr\/lib\/libnepomuk/ \/home\/yeek\/kdedev\/output\/staging\/usr\/lib\/libnepomuk/g'
+find build -name build.make | xargs sed -i -e 's/ \/usr\/share\/dbus-1/ \/home\/yeek\/kdedev\/output\/staging\/usr\/share\/dbus-1/g'
+
+find build/doc -name build.make | xargs sed -i -e 's/meinproc4/meinproc4 --stylesheet \/home\/yeek\/kdedev\/output\/staging\/usr\/share\/apps\/ksgmltools2\/customization\/kde-chunk.xsl/g'
+find build/doc -name build.make | xargs sed -i -e 's/ \/usr\/share\/apps\/ksgmltools2\/customization/ \/home\/yeek\/kdedev\/output\/staging\/usr\/share\/apps\/ksgmltools2\/customization/g'

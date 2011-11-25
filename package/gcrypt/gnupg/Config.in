@@ -1,0 +1,7 @@
+config BR2_PACKAGE_GNUPG
+	bool "GnuPG"
+	help
+	  GnuPG Made Easy (GNUPG) is a library designed to make access to GnuPG easier for applications. It provides a High-Level Crypto API for encryption, decryption, signing, signature verification and key management. Currently it uses GnuPG as its backend but the API isn't restricted to this engine; in fact we have already developed a backend for CMS (S/MIME).
+
+	  http://www.gnupg.org/related_software/gpgme/
+

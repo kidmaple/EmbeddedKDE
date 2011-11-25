@@ -18,7 +18,7 @@ KDEPIMLIBS_CONF_OPT = \
 	-DCMAKE_INSTALL_PREFIX="/usr" \
 	-Wno-dev
 
-KDEPIMLIBS_DEPENDENCIES = kdelibs akonadi libical prison sasl2 openldap gpgme
+KDEPIMLIBS_DEPENDENCIES = kdelibs akonadi libical prison sasl2 openldap gpgme prison
 
 $(eval $(call CMAKETARGETS))
 

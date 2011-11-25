@@ -1,0 +1,19 @@
+*** pth-2.0.7/pthread-config.in.org	2011-11-01 16:23:05.000000000 +0800
+--- pth-2.0.7/pthread-config.in	2011-11-01 16:23:24.697660995 +0800
+***************
+*** 27,33 ****
+  DIFS=' 
+  '
+  
+! prefix="@prefix@"
+  exec_prefix="@exec_prefix@"
+  
+  pth_prefix="$prefix"
+--- 27,33 ----
+  DIFS=' 
+  '
+  
+! prefix="/home/yeek/kdedev/output/staging@prefix@"
+  exec_prefix="@exec_prefix@"
+  
+  pth_prefix="$prefix"
