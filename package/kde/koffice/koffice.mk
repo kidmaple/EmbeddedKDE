@@ -14,6 +14,8 @@ KOFFICE_AUTORECONF = NO
 #KOFFICE_CONF_ENV = 
 KOFFICE_CONF_OPT = \
 	-DCMAKE_INSTALL_PREFIX="/usr" \
+	-DQT_UIC3_EXECUTABLE="/usr/bin/uic" \
+	-DKDE_UIC_EXECUTABLE="/usr/bin/uic3" \
 	-Wno-dev
 
 #create-resources eigen opengl

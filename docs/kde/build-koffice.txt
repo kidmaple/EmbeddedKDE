@@ -1,0 +1,28 @@
+find . -name build.make | xargs sed -i -e 's/\/usr\/bin\/meinproc4/\/home\/yeek\/kdedev\/output\/build\/kdelibs-v4.7.1\/build\/bin\/meinproc4 --stylesheet \/home\/yeek\/kdedev\/output\/staging\/usr\/share\/apps\/ksgmltools2\/customization\/kde-chunk.xsl/'
+
+find .. -name index.docbook | xargs sed -i -e 's/"dtd\/kdex.dtd"/"\/home\/yeek\/kdedev\/output\/staging\/usr\/share\/apps\/ksgmltools2\/customization\/dtd\/kdex.dtd"/'
+
+find . -name build.make | xargs sed -i -e 's/ \/usr\/lib\/libk/ \/home\/yeek\/kdedev\/output\/staging\/usr\/lib\/libk/g'
+find . -name link.txt | xargs sed -i -e 's/ \/usr\/lib\/libk/ \/home\/yeek\/kdedev\/output\/staging\/usr\/lib\/libk/g'
+find . -name build.make | xargs sed -i -e 's/ \/usr\/lib\/libnepomuk/ \/home\/yeek\/kdedev\/output\/staging\/usr\/lib\/libnepomuk/g'
+find . -name link.txt | xargs sed -i -e 's/ \/usr\/lib\/libnepomuk/ \/home\/yeek\/kdedev\/output\/staging\/usr\/lib\/libnepomuk/g'
+find . -name build.make | xargs sed -i -e 's/ \/usr\/lib\/libthreadweaver/ \/home\/yeek\/kdedev\/output\/staging\/usr\/lib\/libthreadweaver/g'
+find . -name link.txt | xargs sed -i -e 's/ \/usr\/lib\/libthreadweaver/ \/home\/yeek\/kdedev\/output\/staging\/usr\/lib\/libthreadweaver/g'
+
+QT_UIC3_EXECUTABLE-NOTFOUND --> uic3
+
+error: no matching function for call to 'qBound(const qreal&, qreal&, double)'
+karbon/plugins/filtereffects/ConvolveMatrixEffect.cpp:220:                dst[dstPixel] = qRgba( qBound(0, static_cast<int>(sumR / divisor + m_bias), 255),
+karbon/plugins/filtereffects/BlendEffect.cpp:118:            d = qRgba(static_cast<quint8>(qBound(0.0, dr * 255.0, 255.0)),
+karbon/plugins/filtereffects/ColorMatrixEffect.cpp:86:    m_value = qBound(0.0, value, 1.0);
+karbon/plugins/filtereffects/ComponentTransferEffect.cpp:147:            dst[pixel] = qRgba(static_cast<quint8>(qBound(0.0, dr * da, 255.0)),
+karbon/plugins/filtereffects/CompositeEffect.cpp:112:                d = qRgba(static_cast<quint8>(qBound(0.0, dr * da, 255.0)),
+karbon/ui/widgets/KarbonGradientWidget.cpp:253:    newPosition = qBound(qreal(0.0), newPosition, qreal(1.0));
+kpresenter/part/KPrViewAdaptor.cpp:136:                                            qBound( -1, quality, 100 ) );
+kspread/ui/CellToolBase_p.cpp:574:        destination.setX(qBound(1, marker.x(), q->maxCol()));
+libs/widgets/KoTriangleColorSelector.cpp:151:    h = qBound(0, h, 360);
+libs/pigment/KoColorSpaceMaths.h:202:        return qBound((typename  KoColorSpaceMathsTraits<_Tdst>::compositetype) KoColorSpaceMathsTraits<_Tdst>::min,
+libs/kotext/styles/KoCharacterStyle.cpp:1219:                    style.addProperty("fo:font-weight", qBound(10, boldness, 90) * 10, KoGenStyle::TextType);
+libs/flake/tools/KoPathSegmentChangeStrategy.cpp:42:    m_segmentParam = qBound(eps, m_segmentParam, 1.0-eps);
+libs/flake/KoShape.cpp:577:    d->transparency = qBound<qreal>(0.0, transparency, 1.0);
+
