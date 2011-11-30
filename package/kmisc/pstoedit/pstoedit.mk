@@ -20,7 +20,7 @@ define PSTOEDIT_CONFIGURE_CMDS
 		--target=$(GNU_TARGET_NAME) \
 		--host=$(GNU_TARGET_NAME) \
 		--build=$(GNU_HOST_NAME) \
-		--prefix=$(STAGING_DIR)/usr \
+		--prefix=/usr \
 		--with-emf \
 		--without-magick \
 		--without-libplot \

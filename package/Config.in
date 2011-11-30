@@ -250,8 +250,8 @@ endmenu
 menu "Crypto"
 source "package/beecrypt/Config.in"
 source "package/gnutls/Config.in"
-source "package/libgcrypt/Config.in"
-source "package/libgpg-error/Config.in"
+#source "package/libgcrypt/Config.in"
+#source "package/libgpg-error/Config.in"
 source "package/libnss/Config.in"
 source "package/openssl/Config.in"
 endmenu
