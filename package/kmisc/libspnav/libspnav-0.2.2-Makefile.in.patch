@@ -1,0 +1,52 @@
+*** libspnav-0.2.2.org/Makefile.in	2010-03-28 07:24:27.000000000 +0800
+--- libspnav-0.2.2/Makefile.in	2011-12-01 15:03:46.199682999 +0800
+***************
+*** 5,13 ****
+  soname = libspnav.so.0
+  lib_so = $(soname).1
+  
+! CC = gcc
+! AR = ar
+! CFLAGS = $(opt) $(dbg) -std=c89 -fpic -pedantic -Wall -fno-strict-aliasing -I.
+  
+  .PHONY: all
+  all: $(lib_a) $(lib_so)
+--- 5,13 ----
+  soname = libspnav.so.0
+  lib_so = $(soname).1
+  
+! CC ?= gcc
+! AR ?= ar
+! CFLAGS ?= $(opt) $(dbg) -std=c89 -fpic -pedantic -Wall -fno-strict-aliasing -I.
+  
+  .PHONY: all
+  all: $(lib_a) $(lib_so)
+***************
+*** 31,43 ****
+  
+  .PHONY: install
+  install: $(lib_a) $(lib_so)
+! 	cp $(lib_a) $(PREFIX)/$(libdir)/$(lib_a)
+! 	cp $(lib_so) $(PREFIX)/$(libdir)/$(lib_so)
+! 	for h in $(hdr); do cp -p $(srcdir)/$$h $(PREFIX)/include/; done
+  
+  .PHONY: uninstall
+  uninstall:
+! 	rm -f $(PREFIX)/$(libdir)/$(lib_a)
+! 	rm -f $(PREFIX)/$(libdir)/$(lib_so)
+! 	for i in $(hdr); do rm -f $(PREFIX)/include/$$i; done
+  
+--- 31,43 ----
+  
+  .PHONY: install
+  install: $(lib_a) $(lib_so)
+! 	cp $(lib_a) $(DESTDIR)/$(PREFIX)/$(libdir)/$(lib_a)
+! 	cp $(lib_so) $(DESTDIR)/$(PREFIX)/$(libdir)/$(lib_so)
+! 	for h in $(hdr); do cp -p $(srcdir)/$$h $(DESTDIR)/$(PREFIX)/include/; done
+  
+  .PHONY: uninstall
+  uninstall:
+! 	rm -f $(DESTDIR)/$(PREFIX)/$(libdir)/$(lib_a)
+! 	rm -f $(DESTDIR)/$(PREFIX)/$(libdir)/$(lib_so)
+! 	for i in $(hdr); do rm -f $(DESTDIR)/$(PREFIX)/include/$$i; done
+  
