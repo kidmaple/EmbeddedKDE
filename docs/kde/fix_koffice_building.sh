@@ -1,0 +1,6 @@
+find . -name build.make | xargs sed -i -e 's/ \/usr\/lib\/libk/ \/home\/yeek\/kdedev\/output\/staging\/usr\/lib\/libk/g'
+find . -name link.txt | xargs sed -i -e 's/ \/usr\/lib\/libk/ \/home\/yeek\/kdedev\/output\/staging\/usr\/lib\/libk/g'
+find . -name build.make | xargs sed -i -e 's/ \/usr\/lib\/libnepomuk/ \/home\/yeek\/kdedev\/output\/staging\/usr\/lib\/libnepomuk/g'
+find . -name link.txt | xargs sed -i -e 's/ \/usr\/lib\/libnepomuk/ \/home\/yeek\/kdedev\/output\/staging\/usr\/lib\/libnepomuk/g'
+find . -name build.make | xargs sed -i -e 's/ \/usr\/lib\/libthreadweaver/ \/home\/yeek\/kdedev\/output\/staging\/usr\/lib\/libthreadweaver/g'
+find . -name link.txt | xargs sed -i -e 's/ \/usr\/lib\/libthreadweaver/ \/home\/yeek\/kdedev\/output\/staging\/usr\/lib\/libthreadweaver/g'

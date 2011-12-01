@@ -1,0 +1,6 @@
+config BR2_PACKAGE_CREATE_RESOURCES
+	bool "create-resources"
+	help
+	  Creative Free and Open Source projects such as Blender, CinePaint, GIMP, Inkscape, Scribus, Audacity, Open Clip Art Library and others are highly successful projects which produce much video, audio, illustrations, photos, and other content. However, much code, media, and infrastructure are produced by each project somewhat independently which could be shared inter-project. For example, several of the aforementioned applications have their own brush types, color preferences, preferred media storage locations, keyboard shortcuts and file format converters. Sharing these resources saves developer time, increases productivity, and contributes to an overall improved user experience. Because of this overlap and the similarity of media, there is need to work together on standards, promotions, and inter-community plans.
+
+	http://create.freedesktop.org/wiki/Main_Page

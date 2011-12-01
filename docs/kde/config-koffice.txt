@@ -1,0 +1,232 @@
+kbuildsycoca4(1634) KBuildServiceFactory::createEntry: Invalid Service :  "/usr/share/applications/kde4/koffice.desktop" 
+[root@Amlogic /]# okular(1637)/kdeui (KIconLoader): Error: standard icon theme "oxygen" not found! 
+
+okular(1637)/kdeui (KIconLoader): Error: standard icon theme "oxygen" not found! 
+
+
+>>> koffice 2.3.3 Configuring
+( if ! [ -d /home/yeek/kdedev/output/build/koffice-2.3.3/build ]; then mkdir -p /home/yeek/kdedev/output/build/koffice-2.3.3/build; fi; cd /home/yeek/kdedev/output/build/koffice-2.3.3/build && rm -f CMakeCache.txt &&  /home/yeek/kdedev/output/host/usr/bin/cmake /home/yeek/kdedev/output/build/koffice-2.3.3 -DCMAKE_TOOLCHAIN_FILE="/home/yeek/kdedev/output/toolchainfile.cmake" -DCMAKE_INSTALL_PREFIX="/usr" -DCMAKE_INSTALL_PREFIX="/usr" -DQT_UIC3_EXECUTABLE="/usr/bin/uic3" -DTINY=OFF -Wno-dev )
+Re-run cmake no build system arguments
+-- The C compiler identification is GNU
+-- The CXX compiler identification is GNU
+-- Check for working C compiler: /home/yeek/kdedev/output/host/usr/bin/arm-none-linux-gnueabi-gcc
+-- Check for working C compiler: /home/yeek/kdedev/output/host/usr/bin/arm-none-linux-gnueabi-gcc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working CXX compiler: /home/yeek/kdedev/output/host/usr/bin/arm-none-linux-gnueabi-g++
+-- Check for working CXX compiler: /home/yeek/kdedev/output/host/usr/bin/arm-none-linux-gnueabi-g++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Looking for Q_WS_X11
+-- Looking for Q_WS_X11 - found
+-- Looking for Q_WS_WIN
+-- Looking for Q_WS_WIN - not found.
+-- Looking for Q_WS_QWS
+-- Looking for Q_WS_QWS - not found.
+-- Looking for Q_WS_MAC
+-- Looking for Q_WS_MAC - not found.
+-- Found Qt-Version 4.7.4 (using /home/yeek/kdedev/output/host/usr/bin/qmake)
+-- Looking for XOpenDisplay in /home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/lib/libX11.so;/home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/lib/libXext.so;/home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/lib/libXft.so;/home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/lib/libXau.so;/home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/lib/libXdmcp.so;/home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/lib/libXpm.so
+-- Looking for XOpenDisplay in /home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/lib/libX11.so;/home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/lib/libXext.so;/home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/lib/libXft.so;/home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/lib/libXau.so;/home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/lib/libXdmcp.so;/home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/lib/libXpm.so - found
+-- Looking for gethostbyname
+-- Looking for gethostbyname - found
+-- Looking for connect
+-- Looking for connect - found
+-- Looking for remove
+-- Looking for remove - found
+-- Looking for shmat
+-- Looking for shmat - found
+-- Looking for IceConnectionNumber in ICE
+-- Looking for IceConnectionNumber in ICE - found
+-- Found X11: /home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/lib/libX11.so
+-- Looking for include files CMAKE_HAVE_PTHREAD_H
+-- Looking for include files CMAKE_HAVE_PTHREAD_H - found
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE 
+-- Found Automoc4: /home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/bin/automoc4 
+-- Found Perl: /usr/bin/perl 
+-- Found Phonon: /home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/include 
+-- Performing Test _OFFT_IS_64BIT
+-- Performing Test _OFFT_IS_64BIT - Success
+-- Performing Test HAVE_FPIE_SUPPORT
+-- Performing Test HAVE_FPIE_SUPPORT - Success
+-- Performing Test __KDE_HAVE_W_OVERLOADED_VIRTUAL
+-- Performing Test __KDE_HAVE_W_OVERLOADED_VIRTUAL - Success
+-- Performing Test __KDE_HAVE_GCC_VISIBILITY
+-- Performing Test __KDE_HAVE_GCC_VISIBILITY - Success
+-- Found KDE 4.7 include dir: /usr/include
+-- Found KDE 4.7 library dir: /usr/lib
+-- Found the KDE4 kconfig_compiler preprocessor: /usr/bin/kconfig_compiler
+-- Found automoc4: /home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/bin/automoc4
+-- Found Qt-Version 4.7.4 (using /home/yeek/kdedev/output/host/usr/bin/qmake)
+-- Found X11: /home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/lib/libX11.so
+-- Found ZLIB: /home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/lib/libz.so (found version "1.2.5")
+-- Found PNG: /home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/lib/libpng.so 
+-- Could NOT find OpenGL (missing:  OPENGL_gl_LIBRARY) 
+-- Did NOT find OpenGL libraries
+-- Found CreateResources: /home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/share/create 
+-- Found KdepimLibs: /home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/lib/cmake/KdepimLibs/KdepimLibsConfig.cmake 
+-- Boost version: 1.45.0
+-- Found Eigen2: /home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/include/eigen2 
+-- Found QCA2: /home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/lib/libqca.so 
+-- Found Exiv2: /home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/lib/libexiv2.so  (found version "0.22.0", required is "0.16")
+-- Found Soprano: /home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/include 
+-- checking for module 'lcms'
+--   found lcms, version 1.19
+-- Found LCMS: /home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/lib/liblcms.so 
+-- checking for module 'lcms2'
+--   found lcms2, version 2.2
+-- Found lcms version 2.02, /home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/lib/liblcms2.so
+-- Check if the system is big endian
+-- Searching 16 bit integer
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of unsigned short
+-- Check size of unsigned short - done
+-- Using unsigned short
+-- Check if the system is big endian - little endian
+-- Performing Test HAVE_DPMSCAPABLE_PROTO
+-- Performing Test HAVE_DPMSCAPABLE_PROTO - Success
+-- WARNING: you are using the obsolete 'PKGCONFIG' macro use FindPkgConfig
+-- Found GNU Scientific Library : /home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot//usr/include /home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/lib/libgsl.so;/home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/lib/libgslcblas.so
+-- LCMS version 2 was found, and it will be used.
+-- Found Spnav: /home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/include 
+-- Could not find sdk/bin/cppumaker
+		or program/offapi.rdb for OOoSDK.
+-- Found X11: /home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/lib/libX11.so
+-- Found Qt-Version 4.7.4 (using /home/yeek/kdedev/output/host/usr/bin/qmake)
+-- Found X11: /home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/lib/libX11.so
+-- Found LibXml2: /home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/lib/libxml2.so 
+-- Found OpenSSL: /home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/lib/libssl.so
+-- Found LibXslt: /home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/lib/libxslt.so
+-- Looking for include files HAVE_UNISTD_H
+-- Looking for include files HAVE_UNISTD_H - found
+-- Looking for include files HAVE_SYS_STAT_H
+-- Looking for include files HAVE_SYS_STAT_H - found
+-- Looking for include files HAVE_STDLIB_H
+-- Looking for include files HAVE_STDLIB_H - found
+-- Looking for include files HAVE_NDIR_H
+-- Looking for include files HAVE_NDIR_H - not found.
+-- Looking for include files HAVE_SYS_DIR_H
+-- Looking for include files HAVE_SYS_DIR_H - found
+-- Looking for include files HAVE_SYS_NDIR_H
+-- Looking for include files HAVE_SYS_NDIR_H - not found.
+-- Looking for include files HAVE_DIRENT_H
+-- Looking for include files HAVE_DIRENT_H - found
+-- Looking for include files HAVE_IEEEFP_H
+-- Looking for include files HAVE_IEEEFP_H - not found.
+-- Looking for include files HAVE_STRING_H
+-- Looking for include files HAVE_STRING_H - found
+-- Looking for include files HAVE_STRINGS_H
+-- Looking for include files HAVE_STRINGS_H - found
+-- Found SharedMimeInfo: /home/yeek/kdedev/output/host/usr/bin/update-mime-database  (found version "0.90", required is "0.18")
+-- checking for module 'gobject-2.0'
+--   found gobject-2.0, version 2.28.8
+-- Found GOBJECT: /home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/lib/libgobject-2.0.so;/home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/lib/libgmodule-2.0.so;/home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/lib/libgthread-2.0.so;/home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/lib/libglib-2.0.so 
+-- Found GLIB2: /home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/lib/libglib-2.0.so 
+-- checking for module 'libgsf-1'
+--   found libgsf-1, version 1.14.4
+-- Found LIBGSF: /home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/lib/libgsf-1.so 
+-- Performing Test ICONV_SECOND_ARGUMENT_IS_CONST
+-- Performing Test ICONV_SECOND_ARGUMENT_IS_CONST - Failed
+-- Found Iconv: /home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/lib/libiconv.so
+-- Looking for sys/iconv.h
+-- Looking for sys/iconv.h - found
+-- checking for module 'libwpd-0.8'
+--   found libwpd-0.8, version 0.8.14
+-- Found WPD: /home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/include/libwpd-0.8 
+-- When latex is reactivated (if?) also port it to GraphicsMagick, to make life easy for Isaac.
+-- Microsoft Word format supported!!!!!!!!!!!!!!!!!!
+-- Check if the system is big endian
+-- Searching 16 bit integer
+-- Using unsigned short
+-- Check if the system is big endian - little endian
+-- Looking for dlfcn.h
+-- Looking for dlfcn.h - found
+-- Looking for math.h
+-- Looking for math.h - found
+-- Looking for float.h
+-- Looking for float.h - found
+-- Looking for errno.h
+-- Looking for errno.h - found
+-- Looking for inttypes.h
+-- Looking for inttypes.h - found
+-- Looking for memory.h
+-- Looking for memory.h - found
+-- Check size of char
+-- Check size of char - done
+-- Check size of short
+-- Check size of short - done
+-- Check size of long
+-- Check size of long - done
+-- Check size of int
+-- Check size of int - done
+-- Check size of void *
+-- Check size of void * - done
+-- Looking for isinf
+-- Looking for isinf - found
+-- Looking for isnan
+-- Looking for isnan - found
+-- Looking for finite
+-- Looking for finite - found
+-- Looking for _finite
+-- Looking for _finite - not found
+-- Looking for inflate
+-- Looking for inflate - found
+-- KPresenter: still need to port svg, genericimageexport, kword, ooimporss, magicpoint, kpr and ooppt filters
+
+-----------------------------------------------------------------------------
+-- The following external packages were located on your system.
+-- This installation will have the extra features provided by these packages.
+-----------------------------------------------------------------------------
+   * Create Resources - Create Resources (brushes, palettes etc.)
+   * KDE PIMLibs - KDE Personal Information Management Libraries
+   * Boost - Boost C++ Libraries
+   * Eigen - C++ template library for linear algebra
+   * QCA - Qt Cryptographic Architecture
+   * Exiv2 - Image metadata library and tools
+   * Soprano - KDE4 RDF handling library
+   * LittleCMS - Color management engine
+   * LittleCMS - Color management engine
+   * GSL - GNU Scientific Library
+   * Spnav - 3Dconnexion device driver and SDK
+   * Okular - Okular ODP Plugin
+   * XML2 - A library for handling XML documents
+   * OpenSSL - A toolkit implementing the Secure Sockets Layer (SSL v2/v3) and Transport Layer Security (TLS v1) protocols
+   * LibXML2 - LibXml2 library
+   * LibXslt - LibXslt Library
+   * SharedMimeInfo - Shared Mime Info
+   * GObject - GObject
+   * Glib2 - Glib2
+   * libgsf - LibGSF
+   * Iconv - Iconv
+   * WPD - WordPerfect Document Library
+
+-----------------------------------------------------------------------------
+-- The following OPTIONAL packages could NOT be located on your system.
+-- Consider installing them to enable more features from this software.
+-----------------------------------------------------------------------------
+   * OpenGL  <>
+     OpenGL support
+     Required by parts of Krita and optionally by flake
+   * DCMTK  <http://dicom.offis.de/dcmtk.php.en>
+     DICOM document processing toolkit
+     Required for processing DICOM structured reports
+
+-----------------------------------------------------------------------------
+
+-- ---------------- The following applications will be built ----------------
+-- kword
+-- kspread
+-- kpresenter
+-- --------------------------------------------------------------------------
+-- Configuring done
+-- Generating done
+

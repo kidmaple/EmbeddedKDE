@@ -1,5 +1,3 @@
-find . -name build.make | xargs sed -i -e 's/\/usr\/bin\/meinproc4/\/home\/yeek\/kdedev\/output\/build\/kdelibs-v4.7.1\/build\/bin\/meinproc4 --stylesheet \/home\/yeek\/kdedev\/output\/staging\/usr\/share\/apps\/ksgmltools2\/customization\/kde-chunk.xsl/'
-
 find .. -name index.docbook | xargs sed -i -e 's/"dtd\/kdex.dtd"/"\/home\/yeek\/kdedev\/output\/staging\/usr\/share\/apps\/ksgmltools2\/customization\/dtd\/kdex.dtd"/'
 
 find . -name build.make | xargs sed -i -e 's/ \/usr\/lib\/libk/ \/home\/yeek\/kdedev\/output\/staging\/usr\/lib\/libk/g'
@@ -10,6 +8,14 @@ find . -name build.make | xargs sed -i -e 's/ \/usr\/lib\/libthreadweaver/ \/hom
 find . -name link.txt | xargs sed -i -e 's/ \/usr\/lib\/libthreadweaver/ \/home\/yeek\/kdedev\/output\/staging\/usr\/lib\/libthreadweaver/g'
 
 QT_UIC3_EXECUTABLE-NOTFOUND --> uic3
+QT_MKSPECS_DIR-NOTFOUND
+
+/home/yeek/kdedev/output/host/usr/arm-unknown-linux-gnueabi/sysroot/usr/include/  --> /usr/include/qt4/
+sed -i -e 's/\/home\/yeek\/kdedev\/output\/host\/usr\/bin\/arm-none-linux-gnueabi-//' filters/kspread/excel/sidewinder/CMakeFiles/recordsxml2cpp.dir/build.make
+sed -i -e 's/\/home\/yeek\/kdedev\/output\/host\/usr\/bin\/arm-none-linux-gnueabi-//' filters/kspread/excel/sidewinder/CMakeFiles/recordsxml2cpp.dir/flags.make
+sed -i -e 's/\/home\/yeek\/kdedev\/output\/host\/usr\/bin\/arm-none-linux-gnueabi-//' filters/kspread/excel/sidewinder/CMakeFiles/recordsxml2cpp.dir/link.txt
+
+build/filters/kspread/excel/sidewinder/CMakeFiles/recordsxml2cpp.dir
 
 error: no matching function for call to 'qBound(const qreal&, qreal&, double)'
 karbon/plugins/filtereffects/ConvolveMatrixEffect.cpp:220:                dst[dstPixel] = qRgba( qBound(0, static_cast<int>(sumR / divisor + m_bias), 255),

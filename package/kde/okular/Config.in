@@ -1,0 +1,7 @@
+config BR2_PACKAGE_OKULAR
+	bool "okular"
+	help
+	  Okular is a universal document viewer based on KPDF for KDE 4. This means Okular works on multiple platforms, including but not limited to Linux, Windows, Mac OS X, *BSD, etc.
+
+	  http://okular.kde.org/
+

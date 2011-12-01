@@ -1,0 +1,7 @@
+config BR2_PACKAGE_XPDF
+	bool "xpdf"
+
+	help
+	  Xpdf is an open source viewer for Portable Document Format (PDF) files. The Xpdf project also includes a PDF text extractor, PDF-to-PostScript converter, and various other utilities.
+
+	http://www.foolabs.com/xpdf/home.html

@@ -1,0 +1,15 @@
+find . -name build.make | xargs sed -i -e 's/ \/usr\/share\/dbus-1\/interfaces\/org.kde.KSpeech.xml/ \/home\/yeek\/kdedev\/output\/staging\/usr\/share\/dbus-1\/interfaces\/org.kde.KSpeech.xml/g'
+
+find . -name build.make | xargs sed -i -e 's/ \/usr\/lib\/libk/ \/home\/yeek\/kdedev\/output\/staging\/usr\/lib\/libk/g'
+find . -name link.txt | xargs sed -i -e 's/ \/usr\/lib\/libk/ \/home\/yeek\/kdedev\/output\/staging\/usr\/lib\/libk/g'
+find . -name build.make | xargs sed -i -e 's/ \/usr\/lib\/libnepomuk/ \/home\/yeek\/kdedev\/output\/staging\/usr\/lib\/libnepomuk/g'
+find . -name link.txt | xargs sed -i -e 's/ \/usr\/lib\/libnepomuk/ \/home\/yeek\/kdedev\/output\/staging\/usr\/lib\/libnepomuk/g'
+find . -name build.make | xargs sed -i -e 's/ \/usr\/lib\/libthreadweaver/ \/home\/yeek\/kdedev\/output\/staging\/usr\/lib\/libthreadweaver/g'
+find . -name link.txt | xargs sed -i -e 's/ \/usr\/lib\/libthreadweaver/ \/home\/yeek\/kdedev\/output\/staging\/usr\/lib\/libthreadweaver/g'
+
+/home/developer/arm-2010q1/arm-none-linux-gnueabi/bin/ld: skipping incompatible /home/yeek/kdedev/output/host/usr/lib/libfreetype.so when searching for -lfreetype
+-L/home/yeek/kdedev/output/staging/usr/lib -lfreetype -lz
+
+Can't search FindKDE4Internal.cmake
+
+

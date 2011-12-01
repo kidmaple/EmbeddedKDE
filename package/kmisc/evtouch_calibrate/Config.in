@@ -1,0 +1,6 @@
+config BR2_PACKAGE_XAPP_EVTOUCH_CALIBRATE
+	bool "evtouch calibrate"
+#	select BR2_PACKAGE_XLIB_LIBX11
+	help
+	  LibGlade based, graphical calibrator for evtouch touchscreen drivers.
+

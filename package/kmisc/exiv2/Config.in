@@ -1,7 +1,17 @@
 config BR2_PACKAGE_EXIV2
 	bool "exiv2"
 	help
-	  The Free Association project maintains exiv2, an open source reference implementation of the icalendar data type and serialization format. exiv2 is used in dozens of calendaring and scheduling products.
+	  Exiv2 is a C++ library and a command line utility to manage image metadata. It provides fast and easy read and write access to the Exif, IPTC and XMP metadata of images in various formats.
+	  The Exiv2 library provides
+ 		- fast read and write access to the Exif, IPTC, and XMP metadata of an image 
+		- an easy to use and extensively documented API
+		- conversions of Exif and IPTC metadata to XMP and vice versa
+		- a smart IPTC implementation that does not affect data that programs like Photoshop store in the same image segment
+		- Exif Makernote support:
+		  Makernote tags can be read and written just like any other metadata
+		  a sophisticated write algorithm avoids corrupting the Makernote
+		- a simple interface to extract previews embedded in RAW images and Exif thumbnails
+		- set and delete methods for Exif thumbnails
 
-	  http://sourceforge.net/projects/freeassociation/
+	  http://www.exiv2.org/
 
