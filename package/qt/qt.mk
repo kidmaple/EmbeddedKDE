@@ -18,7 +18,7 @@ QT_SITE    = http://get.qt.nokia.com/qt/source
 
 QT_INSTALL_STAGING = YES
 
-QT_PREFIX_DIR = usr/qt
+QT_PREFIX_DIR = usr
 QT_PLUGINS_DIR = $(QT_PREFIX_DIR)/lib/plugins
 QT_FONTS_DIR = $(QT_PREFIX_DIR)/lib/fonts
 QT_EXAMPLES_DIR = $(QT_PREFIX_DIR)/share/qt/examples
